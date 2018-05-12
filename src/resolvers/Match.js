@@ -1,4 +1,15 @@
 export default {
+    Match: {
+        async players(parent, args, { models }, info) {
+            const players = await models.MatchPlayer.findAll(parent.id)
+
+            return players.map(p => ({
+                ...p,
+                stats: JSON.stringify(p.stats),
+            }))
+        },
+    },
+
     Query: {
         async match(parent, { id }, { models, pubgApi }) {
             let match = await models.Match.find(id)

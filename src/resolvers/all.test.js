@@ -28,6 +28,12 @@ describe('model :: Player and Match', () => {
                     mapName
                     durationSeconds
                     telemetryUrl
+                    players {
+                        id
+                        rosterId
+                        name
+                        stats
+                    }
                 }
             }
         `)).toMatchSnapshot()
