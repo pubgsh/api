@@ -8,6 +8,7 @@ export default `
 
     type Match {
         id: String!
+        shardId: String!
         gameMode: String
         playedAt: String
         mapName: String

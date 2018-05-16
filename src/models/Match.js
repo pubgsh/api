@@ -10,7 +10,7 @@ const Match = {
     async find(id) {
         return query.one(sql`
             SELECT id, game_mode AS "gameMode", played_at AS "playedAt", map_name AS "mapName",
-                duration_seconds AS "durationSeconds", telemetry_url AS "telemetryUrl"
+                duration_seconds AS "durationSeconds", telemetry_url AS "telemetryUrl", shard_id AS "shardId"
             FROM matches
             WHERE id = ${id}
         `)

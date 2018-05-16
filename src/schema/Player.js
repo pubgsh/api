@@ -6,6 +6,6 @@ export default `
     }
 
     type Query {
-        player(name: String!): Player
+        player(shardId: String!, name: String!): Player
     }
 `
