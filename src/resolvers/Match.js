@@ -1,12 +1,7 @@
 export default {
     Match: {
         async players(parent, args, { models }, info) {
-            const players = await models.MatchPlayer.findAll(parent.id)
-
-            return players.map(p => ({
-                ...p,
-                stats: JSON.stringify(p.stats),
-            }))
+            return models.MatchPlayer.findAll(parent.id)
         },
     },
 

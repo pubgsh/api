@@ -2,7 +2,7 @@ import moment from 'moment'
 import { query, sql } from 'pgr'
 import Player from '@/models/Player.js'
 
-const andreAcctId = 'account.2bd7a66c1b5b4b25a18ee20f64f733b7'
+const breakAcctId = 'account.a36bed11ed214557b0ddef9ef1a56d07'
 
 global.__Fixture(__filename, { mock: true })
 
@@ -92,7 +92,7 @@ describe('model :: Player and Match', () => {
         const matchId = await query.one(sql`
             SELECT match_id AS id
             FROM match_players
-            WHERE player_id = ${andreAcctId}
+            WHERE player_id = ${breakAcctId}
             LIMIT 1
         `, { rowMapper: row => row.id })
 
@@ -109,7 +109,10 @@ describe('model :: Player and Match', () => {
                         id
                         rosterId
                         name
-                        stats
+                        stats {
+                            DBNOs
+                            kills
+                        }
                     }
                 }
             }
