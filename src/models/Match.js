@@ -6,13 +6,23 @@ function getTelemetryUrl(pubgMatch) {
     return asset.attributes.URL
 }
 
+const matchFields = sql.raw(`
+    id, game_mode AS "gameMode", played_at AS "playedAt", map_name AS "mapName",
+    duration_seconds AS "durationSeconds", telemetry_url AS "telemetryUrl", shard_id AS "shardId"
+`)
+
 const Match = {
     async find(id) {
-        return query.one(sql`
-            SELECT id, game_mode AS "gameMode", played_at AS "playedAt", map_name AS "mapName",
-                duration_seconds AS "durationSeconds", telemetry_url AS "telemetryUrl", shard_id AS "shardId"
-            FROM matches
-            WHERE id = ${id}
+        return query.one(sql`SELECT ${matchFields} FROM matches WHERE id = ${id}`)
+    },
+
+    async findAll(shardId, playerId) {
+        return query(sql`
+            SELECT ${matchFields}
+            FROM match_players mp
+            JOIN matches m ON mp.match_id = m.id
+            WHERE shard_id = ${shardId}
+            AND player_id = ${playerId}
         `)
     },
 
