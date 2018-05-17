@@ -3,7 +3,7 @@ import moment from 'moment'
 export default {
     Player: {
         async matches(parent, args, { models }, info) {
-            return models.Player.findMatchIds(parent.id)
+            return models.Player.findMatchIds(parent.shardId, parent.id)
         },
     },
 
@@ -22,6 +22,7 @@ export default {
                 player = await models.Player.create(pubgPlayer)
             }
 
+            player.shardId = shardId
             return player
         },
     },

@@ -13,8 +13,14 @@ const Player = {
         `)
     },
 
-    async findMatchIds(id) {
-        return query(sql`SELECT match_id AS id FROM match_players WHERE player_id = ${id}`)
+    async findMatchIds(shardId, id) {
+        return query(sql`
+            SELECT match_id AS id
+            FROM match_players mp
+            JOIN matches m ON mp.match_id = m.id
+            WHERE shard_id = ${shardId}
+                AND player_id = ${id}
+        `)
     },
 
     async create(pubgPlayer) {
