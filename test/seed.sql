@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS public.player_shards;
 DROP TABLE IF EXISTS public.match_players;
 DROP TABLE IF EXISTS public.players;
 DROP TABLE IF EXISTS public.matches;
@@ -5,7 +6,7 @@ DROP TABLE IF EXISTS public.matches;
 CREATE TABLE public.players (
     id varchar(255) PRIMARY KEY,
     name varchar(255) NULL UNIQUE,
-    created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_at timestamp NOT NULL DEFAULT timezone('utc', now()),
     updated_at timestamp NULL
 );
 
@@ -17,7 +18,7 @@ CREATE TABLE public.matches (
     map_name varchar(255) NULL,
     duration_seconds integer NULL,
     telemetry_url varchar(255) NULL,
-    created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_at timestamp NOT NULL DEFAULT timezone('utc', now()),
     updated_at timestamp NULL
 );
 

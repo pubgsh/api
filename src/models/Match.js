@@ -23,7 +23,8 @@ const Match = {
             JOIN matches m ON mp.match_id = m.id
             WHERE shard_id = ${shardId}
             AND player_id = ${playerId}
-        `)
+            ORDER BY CASE WHEN m.played_at IS NULL THEN '1970-01-01' ELSE m.played_at END DESC
+        `, { debug: true })
     },
 
     async create(pubgMatch) {
@@ -53,22 +54,22 @@ const Match = {
                 UPDATE matches
                 SET game_mode = ${attributes.gameMode}, played_at = ${attributes.createdAt},
                     map_name = ${attributes.mapName}, duration_seconds = ${attributes.duration},
-                    telemetry_url = ${getTelemetryUrl(pubgMatch)}, updated_at = CURRENT_TIMESTAMP
+                    telemetry_url = ${getTelemetryUrl(pubgMatch)}, updated_at = timezone('utc', now())
                 WHERE id = ${pubgMatch.data.id}
-            `)
+            `, { debug: true })
 
             await query(sql`
                 INSERT INTO players (id, name)
                 VALUES ${players.map(p => [p.id, p.name])}
                 ON CONFLICT (id) DO NOTHING
-            `)
+            `, { debug: true })
 
             await query(sql`
                 INSERT INTO match_players (match_id, player_id, roster_id, stats)
                 VALUES ${players.map(p => [pubgMatch.data.id, p.id, p.rosterId, p.stats])}
                 ON CONFLICT (match_id, player_id) DO UPDATE
                     SET roster_id = EXCLUDED.roster_id, stats = EXCLUDED.stats
-            `)
+            `, { debug: true })
         })
 
         return this.find(pubgMatch.data.id)

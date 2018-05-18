@@ -4,9 +4,11 @@ import fs from 'fs'
 import { graphqlHapi, graphiqlHapi } from 'apollo-server-hapi'
 import { makeExecutableSchema } from 'graphql-tools'
 import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas'
-import { createPool, query } from 'pgr'
+import { pg, createPool, query } from 'pgr'
 import models from '@/models'
 import PubgApi from '@/lib/pubg-api'
+
+pg.types.setTypeParser(1114, strValue => `${strValue}+0000`)
 
 require('dotenv').config({ path: './.env.local' })
 

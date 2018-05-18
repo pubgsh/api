@@ -10,7 +10,7 @@ const Player = {
             WHERE 1 = 1
                 ${sql.if('AND id = ?', id)}
                 ${sql.if('AND name = ?', name)}
-        `)
+        `, { debug: true })
     },
 
     async create(pubgPlayer) {
@@ -29,27 +29,27 @@ const Player = {
                 INSERT INTO players (id, name)
                 VALUES (${player.id}, ${player.name})
                 ON CONFLICT (id) DO UPDATE
-                    SET name = EXCLUDED.name, updated_at = CURRENT_TIMESTAMP
-            `)
+                    SET name = EXCLUDED.name, updated_at = timezone('utc', now())
+            `, { debug: true })
 
             await query(sql`
                 INSERT INTO matches (id, shard_id)
                 VALUES ${matches}
                 ON CONFLICT DO NOTHING
-            `)
+            `, { debug: true })
 
             await query(sql`
                 INSERT INTO match_players (match_id, player_id)
                 VALUES ${matchPlayers}
                 ON CONFLICT DO NOTHING
-            `)
+            `, { debug: true })
 
             await query(sql`
                 INSERT INTO player_shards (player_id, shard_id, last_fetched_at)
-                VALUES (${player.id}, ${shardId}, CURRENT_TIMESTAMP)
+                VALUES (${player.id}, ${shardId}, timezone('utc', now()))
                 ON CONFLICT (player_id, shard_id) DO UPDATE
-                    SET last_fetched_at = CURRENT_TIMESTAMP
-            `)
+                    SET last_fetched_at = timezone('utc', now())
+            `, { debug: true })
         })
 
         return this.find(shardId, { id: pubgPlayer.id })
