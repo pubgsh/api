@@ -13,7 +13,7 @@ export default {
 
             const shouldFetch = !player
                 || !player.lastFetchedAt
-                || moment.utc().diff(moment.utc(player.lastFetchedAt), 'hour') > 1
+                || moment.utc().diff(moment.utc(player.lastFetchedAt), 'minute') > 15
 
             if (shouldFetch) {
                 const pubgPlayer = await pubgApi.getPlayer(shardId, name)
