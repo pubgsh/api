@@ -47,7 +47,7 @@ describe('model :: Player and Match', () => {
         expect(Player.create).not.toHaveBeenCalled()
     })
 
-    test('requesting a player on a differnt shard updates the db', async () => {
+    test('requesting a player on a different shard updates the db', async () => {
         expect(await global.__graphql(`
             query {
                 player(shardId: "pc-eu", name: "BreaK") {
@@ -61,9 +61,8 @@ describe('model :: Player and Match', () => {
         `)).toMatchSnapshot()
 
         expect(Player.create).toHaveBeenCalled()
-        expect(await query(sql`SELECT * FROM players p LEFT JOIN player_shards ps ON p.id = ps.player_id`))
-            .toHaveLength(2)
-    })
+        expect(await query(sql`SELECT * FROM player_shards`)).toHaveLength(2)
+    }, 10000)
 
     test('re-requesting a player refreshes matches if enough time has passed', async () => {
         Player.find = jest.fn(async (...args) => {
@@ -116,6 +115,15 @@ describe('model :: Player and Match', () => {
                     }
                 }
             }
-        `)).toMatchSnapshot()
+        `)).toMatchObject({
+            result: {
+                data: {
+                    match: {
+                        id: matchId,
+                        telemetryUrl: expect.any(String),
+                    },
+                },
+            },
+        })
     })
 })

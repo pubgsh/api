@@ -50,6 +50,7 @@ function Fixture(filename, { mock = true }) {
             const hash = configHash(config)
             const fixturePath = path.join(fixtureDir, `${path.basename(filename, '.js')}-${hash}.json`)
 
+            console.log('made real request')
             const response = await origAxios(config)
             fs.writeFileSync(fixturePath, JSON.stringify({ config, response }, null, 2))
             return [response.status, response.data, response.headers]
