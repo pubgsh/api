@@ -1,5 +1,7 @@
 import { query, sql } from 'pgr'
 
+const debug = false
+
 function getTelemetryUrl(pubgMatch) {
     const assetId = pubgMatch.data.relationships.assets.data[0].id
     const asset = pubgMatch.included.find(i => i.type === 'asset' && i.id === assetId)
@@ -23,8 +25,8 @@ const Match = {
             JOIN matches m ON mp.match_id = m.id
             WHERE shard_id = ${shardId}
             AND player_id = ${playerId}
-            ORDER BY CASE WHEN m.played_at IS NULL THEN '1970-01-01' ELSE m.played_at END DESC
-        `, { debug: true })
+            ORDER BY CASE WHEN m.played_at IS NULL THEN m.created_at ELSE m.played_at END DESC
+        `, { debug })
     },
 
     async create(pubgMatch) {
@@ -56,20 +58,20 @@ const Match = {
                     map_name = ${attributes.mapName}, duration_seconds = ${attributes.duration},
                     telemetry_url = ${getTelemetryUrl(pubgMatch)}, updated_at = timezone('utc', now())
                 WHERE id = ${pubgMatch.data.id}
-            `, { debug: true })
+            `, { debug })
 
             await query(sql`
                 INSERT INTO players (id, name)
                 VALUES ${players.map(p => [p.id, p.name])}
                 ON CONFLICT (id) DO NOTHING
-            `, { debug: true })
+            `, { debug })
 
             await query(sql`
                 INSERT INTO match_players (match_id, player_id, roster_id, stats)
                 VALUES ${players.map(p => [pubgMatch.data.id, p.id, p.rosterId, p.stats])}
                 ON CONFLICT (match_id, player_id) DO UPDATE
                     SET roster_id = EXCLUDED.roster_id, stats = EXCLUDED.stats
-            `, { debug: true })
+            `, { debug })
         })
 
         return this.find(pubgMatch.data.id)
