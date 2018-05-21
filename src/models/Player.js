@@ -1,3 +1,4 @@
+import moment from 'moment'
 import { query, sql } from 'pgr'
 
 const debug = false
@@ -23,7 +24,12 @@ const Player = {
             name,
         }
 
-        const matches = pubgPlayer.relationships.matches.data.map(d => [d.id, shardId])
+        const now = Date.now()
+        const matches = pubgPlayer.relationships.matches.data.map((d, i) => [
+            d.id,
+            shardId,
+            moment.utc(now - (i * 1000)).format('YYYY-MM-DD HH:mm:ss'),
+        ])
         const matchPlayers = matches.map(m => [m[0], player.id])
 
         await query.transaction(async tquery => {
@@ -35,7 +41,7 @@ const Player = {
             `, { debug })
 
             await query(sql`
-                INSERT INTO matches (id, shard_id)
+                INSERT INTO matches (id, shard_id, created_at)
                 VALUES ${matches}
                 ON CONFLICT DO NOTHING
             `, { debug })

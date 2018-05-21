@@ -16,7 +16,7 @@ const loadRandomMatch = async () => {
     const pubgMatch = await pubgApi.getMatch(matchToLoad.id)
     const match = await models.Match.create(pubgMatch)
 
-    console.log(`[crawler]: Created match ${match.id}`)
+    console.log(`[crawler]: Loaded match ${match.id}`)
 }
 
 const refreshPlayer = async () => {
