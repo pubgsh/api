@@ -7,7 +7,6 @@ import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas'
 import { pg, createPool, query } from 'pgr'
 import models from '@/models'
 import PubgApi from '@/lib/pubg-api'
-import crawler from './crawler.js'
 
 pg.types.setTypeParser(1114, strValue => `${strValue}+0000`)
 
@@ -87,5 +86,4 @@ process.on('unhandledRejection', err => {
 
 if (require.main === module) {
     init()
-    crawler.start()
 }
