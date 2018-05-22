@@ -1,7 +1,7 @@
 export default {
     Match: {
         async players(parent, args, { models }, info) {
-            // TODO: This could use a DataLoader to batch load
+            // TODO: Batch load with DataLoader
             return models.MatchPlayer.findAll(parent.id)
         },
     },

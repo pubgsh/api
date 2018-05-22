@@ -23,14 +23,11 @@ export default {
 
                 player = await models.Player.create(pubgPlayer)
 
-                const matchesToLoad = await models.Match.findAllUnloaded(shardId, player.id)
-                if (!isEmpty(matchesToLoad)) {
-                    console.log(`Loading ${matchesToLoad.length} matches for ${player.name}`)
+                const idsToLoad = await models.Match.findAllUnloadedIds(shardId, player.id)
+                if (!isEmpty(idsToLoad)) {
+                    console.log(`Loading ${idsToLoad.length} matches for ${player.name}`)
 
-                    const pubgMatches = await Promise.map(matchesToLoad, m => {
-                        return pubgApi.getMatch(m.id)
-                    }, { concurrency: 5 })
-
+                    const pubgMatches = await Promise.map(idsToLoad, pubgApi.getMatch, { concurrency: 5 })
                     await models.Match.createAll(pubgMatches)
 
                     player = await models.Player.find(shardId, { name })

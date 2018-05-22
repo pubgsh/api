@@ -1,6 +1,7 @@
 import fs from 'fs-extra'
+import { cloneDeep } from 'lodash'
 import path from 'path'
-import { Pool } from 'pg'
+import { Pool } from 'pg' // eslint-disable-line
 import { createPool, getPool, query } from 'pgr'
 import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
@@ -18,7 +19,13 @@ function Fixture(filename, { mock = true }) {
     const fixtureDir = path.join(path.dirname(filename), '__fixtures__')
     fs.ensureDirSync(fixtureDir)
 
-    const configHash = config => sha1(JSON.stringify(config, null, 2)).substring(0, 5)
+    const safeConfig = config => {
+        const clonedConfig = cloneDeep(config)
+        delete clonedConfig.headers.Authorization
+        return clonedConfig
+    }
+
+    const configHash = config => sha1(JSON.stringify(safeConfig(config), null, 2)).substring(0, 5)
 
     if (mock) {
         const adapter = new MockAdapter(axios)
@@ -50,9 +57,9 @@ function Fixture(filename, { mock = true }) {
             const hash = configHash(config)
             const fixturePath = path.join(fixtureDir, `${path.basename(filename, '.js')}-${hash}.json`)
 
-            console.log('made real request')
             const response = await origAxios(config)
-            fs.writeFileSync(fixturePath, JSON.stringify({ config, response }, null, 2))
+            delete response.config.headers.Authorization
+            fs.writeFileSync(fixturePath, JSON.stringify({ config: safeConfig(config), response }, null, 2))
             return [response.status, response.data, response.headers]
         })
     }

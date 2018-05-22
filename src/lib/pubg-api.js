@@ -30,13 +30,11 @@ export default function PubgApi(apiKey) {
         },
 
         async getMatch(id) {
-            const match = await apiGet(`matches/${id}`)
-            return match
+            return apiGet(`matches/${id}`)
         },
 
         async getMatchTelemetry(telemetryUrl) {
-            const telemetry = await axios.get(telemetryUrl)
-            return telemetry
+            return axios.get(telemetryUrl)
         },
     }
 }

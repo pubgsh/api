@@ -4,6 +4,7 @@ import fs from 'fs'
 import { graphqlHapi, graphiqlHapi } from 'apollo-server-hapi'
 import { makeExecutableSchema } from 'graphql-tools'
 import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas'
+import depthLimit from 'graphql-depth-limit'
 import { pg, createPool, query } from 'pgr'
 import models from '@/models'
 import PubgApi from '@/lib/pubg-api'
@@ -37,6 +38,7 @@ export async function registerGraphql() {
                     models,
                     pubgApi: PubgApi(process.env.PUBG_API_KEY),
                 },
+                validationRules: [depthLimit(3)],
             },
             route: {
                 cors: true,

@@ -1,0 +1,141 @@
+{
+  "config": {
+    "transformRequest": {},
+    "transformResponse": {},
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "headers": {
+      "Accept": "application/vnd.api+json"
+    },
+    "method": "get",
+    "url": "https://api.playbattlegrounds.com/shards/pc-na/players?filter[playerNames]=BreaK"
+  },
+  "response": {
+    "data": {
+      "data": [
+        {
+          "type": "player",
+          "id": "account.a36bed11ed214557b0ddef9ef1a56d07",
+          "attributes": {
+            "patchVersion": "",
+            "name": "BreaK",
+            "stats": null,
+            "titleId": "bluehole-pubg",
+            "shardId": "pc-na",
+            "createdAt": "2018-04-08T13:48:56Z",
+            "updatedAt": "2018-04-08T13:48:56Z"
+          },
+          "relationships": {
+            "assets": {
+              "data": []
+            },
+            "matches": {
+              "data": [
+                {
+                  "type": "match",
+                  "id": "84c27837-cf64-4588-8093-dbff07d6efa8"
+                },
+                {
+                  "type": "match",
+                  "id": "7e33af12-4bb0-4963-8ba2-2b62b45fc2f7"
+                },
+                {
+                  "type": "match",
+                  "id": "cae0f6d6-5328-43c8-9912-ff4d73390113"
+                },
+                {
+                  "type": "match",
+                  "id": "855ca76d-42ca-4860-ad46-692e2ae89f38"
+                },
+                {
+                  "type": "match",
+                  "id": "4d75956b-9110-420c-bd92-17d1eb359b39"
+                },
+                {
+                  "type": "match",
+                  "id": "07aceaa8-8c20-49ca-b523-6a8bd4e13524"
+                },
+                {
+                  "type": "match",
+                  "id": "201648ad-8d5a-4794-ae14-f7f4fb473ddf"
+                },
+                {
+                  "type": "match",
+                  "id": "05bab6df-0ab8-4358-87c9-409ee8f927ec"
+                },
+                {
+                  "type": "match",
+                  "id": "66b6866a-2fb7-4474-924e-3ee8c976e889"
+                },
+                {
+                  "type": "match",
+                  "id": "e4c477a8-640c-4912-8925-e0342bb5e8d1"
+                },
+                {
+                  "type": "match",
+                  "id": "db84024a-0078-4a2e-a40f-a9996d1dab64"
+                },
+                {
+                  "type": "match",
+                  "id": "7996fc51-bc51-4d72-92f5-0bb0d404484e"
+                },
+                {
+                  "type": "match",
+                  "id": "328effd5-5eb1-46b2-af3c-be32ffdbe369"
+                }
+              ]
+            }
+          },
+          "links": {
+            "schema": "",
+            "self": "https://api.playbattlegrounds.com/shards/pc-na/players/account.a36bed11ed214557b0ddef9ef1a56d07"
+          }
+        }
+      ],
+      "links": {
+        "self": "https://api.playbattlegrounds.com/shards/pc-na/players?filter[playerNames]=BreaK"
+      },
+      "meta": {}
+    },
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+      "content-type": "application/json",
+      "content-length": "651"
+    },
+    "config": {
+      "transformRequest": {},
+      "transformResponse": {},
+      "timeout": 0,
+      "xsrfCookieName": "XSRF-TOKEN",
+      "xsrfHeaderName": "X-XSRF-TOKEN",
+      "maxContentLength": -1,
+      "headers": {
+        "Accept": "application/vnd.api+json"
+      },
+      "method": "get",
+      "url": "https://api.playbattlegrounds.com/shards/pc-na/players?filter[playerNames]=BreaK"
+    },
+    "request": {
+      "upload": {
+        "_ownerDocument": {
+          "location": {
+            "href": "about:blank",
+            "origin": "null",
+            "protocol": "about:",
+            "host": "",
+            "hostname": "",
+            "port": "",
+            "pathname": "blank",
+            "search": "",
+            "hash": ""
+          }
+        }
+      },
+      "_registeredHandlers": {},
+      "_eventHandlers": {}
+    }
+  }
+}

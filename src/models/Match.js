@@ -63,6 +63,10 @@ const Match = {
         return query.one(sql`SELECT ${matchFields} FROM matches WHERE id = ${id}`)
     },
 
+    async findMostRecent() {
+        return query.one(sql`SELECT ${matchFields} FROM matches ORDER BY created_at DESC LIMIT 1`)
+    },
+
     async findAll(shardId, playerId) {
         return query(sql`
             SELECT ${matchFields}
@@ -75,7 +79,7 @@ const Match = {
         `, { debug })
     },
 
-    async findAllUnloaded(shardId, playerId) {
+    async findAllUnloadedIds(shardId, playerId) {
         return query(sql`
             SELECT id
             FROM match_players mp
@@ -83,7 +87,10 @@ const Match = {
             WHERE shard_id = ${shardId}
             AND player_id = ${playerId}
             AND played_at IS NULL
-        `, { debug })
+        `, {
+            rowMapper: row => row.id,
+            debug,
+        })
     },
 
     async create(pubgMatch) {
