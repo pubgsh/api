@@ -63,12 +63,24 @@ async function recreateDb() {  // eslint-disable-line
 }
 
 async function init() {
-    createPool('default', {
+    const pgConfig = {
         user: process.env.PGUSER,
         host: process.env.PGHOST,
         password: process.env.PGPASSWORD,
         database: process.env.PGDATABASE,
-    })
+    }
+
+    if (process.env.PGCERTPATH) {
+        pgConfig.ssl = {
+            rejectUnauthorized: false,
+            ca: fs.readFileSync(`${process.env.PGCERTPATH}/server-ca.pem`).toString(),
+            key: fs.readFileSync(`${process.env.PGCERTPATH}/client-key.pem`).toString(),
+            cert: fs.readFileSync(`${process.env.PGCERTPATH}/client-cert.pem`).toString(),
+        }
+    }
+
+    createPool('default', pgConfig)
+    console.log(`PG connected to [${process.env.PGHOST} : ${process.env.PGDATABASE}]`)
 
     // await recreateDb()
 
@@ -79,7 +91,10 @@ async function init() {
     console.log(`Server running at: ${server.info.uri}`)
 }
 
-process.on('SIGINT', () => process.exit(0))
+process.on('SIGINT', () => {
+    console.log('SIGINT received. Shutting down...')
+    process.exit(0)
+})
 
 process.on('unhandledRejection', err => {
     console.error(err)
