@@ -18,6 +18,7 @@
         "pgr": "0.1.4"
     },
     "scripts": {
+        "build": "babel src --out-dir dist --source-maps -q --ignore **/*.test.js",
         "start": "nodemon -w src --exec babel-node src/app.js",
         "check": "npm run lint && npm run test",
         "lint": "eslint -c .eslintrc src",

@@ -14,7 +14,7 @@ require('dotenv').config({ path: './.env.local' })
 
 export const server = process.env.NODE_ENV === 'test'
     ? Hapi.server({ autoListen: false })
-    : Hapi.server({ port: process.env.HAPI_PORT || 3005, host: 'localhost' })
+    : Hapi.server({ port: process.env.HAPI_PORT || 8080, host: process.env.HOST || '0.0.0.0' })
 
 function createSchema() {
     const typeDefs = mergeTypes(fileLoader(path.join(__dirname, './schema')))
@@ -78,6 +78,8 @@ async function init() {
     await server.start()
     console.log(`Server running at: ${server.info.uri}`)
 }
+
+process.on('SIGINT', () => process.exit(0))
 
 process.on('unhandledRejection', err => {
     console.error(err)
