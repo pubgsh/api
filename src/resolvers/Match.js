@@ -19,6 +19,10 @@ export default {
 
             return match
         },
+
+        async latestMatch(parent, { id }, { models, pubgApi }) {
+            return models.Match.findLatest()
+        },
     },
 }
 

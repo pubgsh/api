@@ -63,7 +63,7 @@ const Match = {
         return query.one(sql`SELECT ${matchFields} FROM matches WHERE id = ${id}`)
     },
 
-    async findMostRecent() {
+    async findLatest() {
         return query.one(sql`SELECT ${matchFields} FROM matches ORDER BY created_at DESC LIMIT 1`)
     },
 
