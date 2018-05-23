@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { isEmpty } from 'lodash'
 import { query, sql } from 'pgr'
 
 const debug = false
@@ -40,17 +41,21 @@ const Player = {
                     SET name = EXCLUDED.name, updated_at = timezone('utc', now())
             `, { debug })
 
-            await tquery(sql`
-                INSERT INTO matches (id, shard_id, created_at)
-                VALUES ${matches}
-                ON CONFLICT DO NOTHING
-            `, { debug })
+            if (!isEmpty(matches)) {
+                await tquery(sql`
+                    INSERT INTO matches (id, shard_id, created_at)
+                    VALUES ${matches}
+                    ON CONFLICT DO NOTHING
+                `, { debug })
+            }
 
-            await tquery(sql`
-                INSERT INTO match_players (match_id, player_id)
-                VALUES ${matchPlayers}
-                ON CONFLICT DO NOTHING
-            `, { debug })
+            if (!isEmpty(matchPlayers)) {
+                await tquery(sql`
+                    INSERT INTO match_players (match_id, player_id)
+                    VALUES ${matchPlayers}
+                    ON CONFLICT DO NOTHING
+                `, { debug })
+            }
 
             await tquery(sql`
                 INSERT INTO player_shards (player_id, shard_id, last_fetched_at)
