@@ -13,6 +13,11 @@ export default {
         async player(parent, { name, shardId }, { models, pubgApi }) {
             let player = await models.Player.find(shardId, { name })
 
+            if (player) {
+                const ago = moment.utc().diff(moment.utc(player.lastFetchedAt), 'minute')
+                console.log(`Player ${player.name} last fetched at ${player.lastFetchedAt} (${ago} min ago)`)
+            }
+
             const shouldFetch = !player
                 || !player.lastFetchedAt
                 || moment.utc().diff(moment.utc(player.lastFetchedAt), 'minute') > 15
