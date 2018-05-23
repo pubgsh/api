@@ -1,8 +1,13 @@
 {
     "name": "pubg.sh-api",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "main": "src/app.js",
     "author": "Andre Azzolini (apazzolini)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/apazzolini/pubg.sh-api.git"
+    },
+    "license": "MIT",
     "scripts": {
         "build": "babel src --out-dir dist --source-maps -q --ignore **/*.test.js",
         "start": "nodemon -w src --exec babel-node src/app.js",
