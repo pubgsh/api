@@ -32,7 +32,7 @@ export default {
                 if (!isEmpty(idsToLoad)) {
                     console.log(`Loading ${idsToLoad.length} matches for ${player.name}`)
 
-                    const pubgMatches = await Promise.map(idsToLoad, pubgApi.getMatch, { concurrency: 5 })
+                    const pubgMatches = await Promise.map(idsToLoad, pubgApi.getMatch, { concurrency: 10 })
                     await models.Match.createAll(pubgMatches)
 
                     player = await models.Player.find(shardId, { name })

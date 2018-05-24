@@ -62,6 +62,7 @@ async function registerGraphiql() {
 async function recreateDb() {  // eslint-disable-line
     const seed = fs.readFileSync(path.join(__dirname, '../test/seed.sql'), 'utf-8')
     await query(seed)
+    console.log('Recreated DB')
 }
 
 async function init() {

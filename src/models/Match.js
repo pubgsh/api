@@ -75,22 +75,26 @@ const Match = {
             WHERE shard_id = ${shardId}
             AND player_id = ${playerId}
             AND game_mode NOT LIKE '%warmode%'
+            AND m.played_at > (TIMEZONE('utc', NOW()) - INTERVAL '14 DAY')
             ORDER BY m.played_at DESC
+            LIMIT 50
         `, { debug })
     },
 
     async findAllUnloadedIds(shardId, playerId) {
-        return query(sql`
-            SELECT id
+        const matches = await query(sql`
+            SELECT id, m.played_at AS "playedAt"
             FROM match_players mp
             JOIN matches m ON mp.match_id = m.id
             WHERE shard_id = ${shardId}
             AND player_id = ${playerId}
-            AND played_at IS NULL
-        `, {
-            rowMapper: row => row.id,
-            debug,
-        })
+            ORDER BY m.created_at DESC
+            LIMIT 50
+        `, { debug })
+
+        // We want to filter in memory instead of the DB so that we don't constantly go back in time
+        // to load more matches we won't render anyways.
+        return matches.filter(m => !m.playedAt).map(m => m.id)
     },
 
     async create(pubgMatch) {

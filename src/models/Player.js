@@ -30,7 +30,7 @@ const Player = {
             d.id,
             shardId,
             moment.utc(now - (i * 1000)).format('YYYY-MM-DD HH:mm:ss'),
-        ])
+        ]).slice(0, 50)
         const matchPlayers = matches.map(m => [m[0], player.id])
 
         await query.transaction(async tquery => {
@@ -38,7 +38,7 @@ const Player = {
                 INSERT INTO players (id, name)
                 VALUES (${player.id}, ${player.name})
                 ON CONFLICT (id) DO UPDATE
-                    SET name = EXCLUDED.name, updated_at = timezone('utc', now())
+                    SET name = EXCLUDED.name, updated_at = TIMEZONE('utc', NOW())
             `, { debug })
 
             if (!isEmpty(matches)) {
@@ -59,9 +59,9 @@ const Player = {
 
             await tquery(sql`
                 INSERT INTO player_shards (player_id, shard_id, last_fetched_at)
-                VALUES (${player.id}, ${shardId}, timezone('utc', now()))
+                VALUES (${player.id}, ${shardId}, TIMEZONE('utc', NOW()))
                 ON CONFLICT (player_id, shard_id) DO UPDATE
-                    SET last_fetched_at = timezone('utc', now())
+                    SET last_fetched_at = TIMEZONE('utc', NOW())
             `, { debug })
         })
 
