@@ -2,6 +2,7 @@ export default `
     type Player {
         id: String!
         name: String!
+        lastFetchedAt: String
         matches: [Match!]
     }
 
