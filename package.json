@@ -18,8 +18,10 @@
     },
     "dependencies": {
         "apollo-server-hapi": "1.3.6",
+        "async": "2.6.1",
         "axios": "0.18.0",
         "bluebird": "3.5.1",
+        "chalk": "2.4.1",
         "dotenv": "5.0.1",
         "glob": "7.1.2",
         "graphql": "0.13.2",
@@ -29,7 +31,8 @@
         "lodash": "4.17.10",
         "merge-graphql-schemas": "1.5.1",
         "moment": "2.22.1",
-        "pgr": "0.1.4"
+        "pgr": "0.1.4",
+        "socket.io": "2.1.1"
     },
     "devDependencies": {
         "axios-mock-adapter": "1.15.0",
@@ -54,6 +57,7 @@
         "sha1": "1.1.1"
     },
     "jest": {
+        "testEnvironment": "node",
         "setupFiles": [
             "<rootDir>/node_modules/dotenv/config.js",
             "<rootDir>/test/setup.js"
@@ -61,6 +65,9 @@
         "testPathIgnorePatterns": [
             "<rootDir>/templates",
             "<rootDir>/node_modules/"
+        ],
+        "watchPathIgnorePatterns": [
+            "<rootDir>/src/.*/__fixtures__/.*"
         ]
     }
 }

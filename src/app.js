@@ -1,5 +1,7 @@
+import 'dotenv/config'
 import path from 'path'
 import Hapi from 'hapi'
+import socketio from 'socket.io'
 import fs from 'fs'
 import { graphqlHapi, graphiqlHapi } from 'apollo-server-hapi'
 import { makeExecutableSchema } from 'graphql-tools'
@@ -7,11 +9,12 @@ import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas'
 import depthLimit from 'graphql-depth-limit'
 import { pg, createPool, query } from 'pgr'
 import models from '@/models'
-import PubgApi from '@/lib/pubg-api'
+import PubgApi from '@/lib/pubg-api.js'
 
 pg.types.setTypeParser(1114, strValue => `${strValue}+0000`)
 
-require('dotenv').config({ path: './.env.local' })
+let io
+export const getIo = () => io
 
 export const server = process.env.NODE_ENV === 'test'
     ? Hapi.server({ autoListen: false })
@@ -36,7 +39,7 @@ export async function registerGraphql() {
                 schema: createSchema(),
                 context: {
                     models,
-                    pubgApi: PubgApi(process.env.PUBG_API_KEY),
+                    PubgApi,
                 },
                 validationRules: [depthLimit(3)],
             },
@@ -85,12 +88,15 @@ async function init() {
     createPool('default', pgConfig)
     console.log(`PG connected to [${process.env.PGHOST} : ${process.env.PGDATABASE}]`)
 
-    // await recreateDb()
+    if (process.env.NODE_ENV !== 'production') {
+        // await recreateDb()
+    }
 
     await registerGraphql()
     await registerGraphiql()
 
     await server.start()
+    io = socketio(server.listener)
     console.log(`Server running at: ${server.info.uri}`)
 }
 

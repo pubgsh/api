@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import fs from 'fs-extra'
 import { cloneDeep } from 'lodash'
 import path from 'path'
@@ -8,8 +9,6 @@ import MockAdapter from 'axios-mock-adapter'
 import glob from 'glob'
 import sha1 from 'sha1'
 import { server, registerGraphql } from '@/app.js'
-
-require('dotenv').config({ path: './.env.local' })
 
 // -----------------------------------------------------------------------------
 // Mocks -----------------------------------------------------------------------
@@ -34,20 +33,20 @@ function Fixture(filename, { mock = true }) {
         const knownFixtures = {}
 
         knownFixturePaths.forEach(fixturePath => {
-            const { config, response } = require(fixturePath) // eslint-disable-line
-            knownFixtures[configHash(config)] = response
+            const { config, result } = require(fixturePath) // eslint-disable-line
+            knownFixtures[configHash(config)] = result
         })
 
         adapter.onAny().reply(async config => {
-            const response = knownFixtures[configHash(config)]
+            const result = knownFixtures[configHash(config)]
 
-            if (!response) {
+            if (!result) {
                 console.error('Unable to find fixture for config')
                 console.error(JSON.stringify(config, null, 2))
                 throw Error('FIXTURE_NOT_FOUND')
             }
 
-            return [response.status, response.data, response.headers]
+            return result
         })
     } else {
         const origAxios = axios.create()
@@ -58,9 +57,16 @@ function Fixture(filename, { mock = true }) {
             const fixturePath = path.join(fixtureDir, `${path.basename(filename, '.js')}-${hash}.json`)
 
             const response = await origAxios(config)
+
+            const fixture = {
+                config: safeConfig(config),
+                result: [response.status, response.data, response.headers],
+            }
+
             delete response.config.headers.Authorization
-            fs.writeFileSync(fixturePath, JSON.stringify({ config: safeConfig(config), response }, null, 2))
-            return [response.status, response.data, response.headers]
+            fs.writeFileSync(fixturePath, JSON.stringify(fixture, null, 2))
+
+            return fixture.result
         })
     }
 }

@@ -10,10 +10,10 @@ describe('model :: Player and Match', () => {
     beforeAll(global.__setupTestEnv)
     afterAll(global.__teardownTestEnv)
 
-    const origCreate = Player.create
+    const origCreate = Player.createOrUpdate
     const origFind = Player.find
     beforeEach(() => {
-        Player.create = jest.fn(async (...args) => origCreate.call(Player, ...args))
+        Player.createOrUpdate = jest.fn(async (...args) => origCreate.call(Player, ...args))
         Player.find = jest.fn(async (...args) => origFind.call(Player, ...args))
     })
 
@@ -29,7 +29,7 @@ describe('model :: Player and Match', () => {
                 }
             }
         `)).toMatchSnapshot()
-        expect(Player.create).toHaveBeenCalled()
+        expect(Player.createOrUpdate).toHaveBeenCalled()
     })
 
     test('re-requesting a player retrieves it from the db', async () => {
@@ -44,7 +44,7 @@ describe('model :: Player and Match', () => {
                 }
             }
         `)).toMatchSnapshot()
-        expect(Player.create).not.toHaveBeenCalled()
+        expect(Player.createOrUpdate).not.toHaveBeenCalled()
     })
 
     test('requesting a player on a different shard updates the db', async () => {
@@ -60,7 +60,7 @@ describe('model :: Player and Match', () => {
             }
         `)).toMatchSnapshot()
 
-        expect(Player.create).toHaveBeenCalled()
+        expect(Player.createOrUpdate).toHaveBeenCalled()
         expect(await query(sql`SELECT * FROM player_shards`)).toHaveLength(2)
     }, 10000)
 
@@ -69,6 +69,7 @@ describe('model :: Player and Match', () => {
             return {
                 id: 'account.a36bed11ed214557b0ddef9ef1a56d07',
                 name: 'BreaK',
+                shardId: 'pc-na',
                 lastFetchedAt: moment.utc('2018-01-01 00:00:00'),
             }
         })
@@ -84,7 +85,7 @@ describe('model :: Player and Match', () => {
                 }
             }
         `)
-        expect(Player.create).toHaveBeenCalled()
+        expect(Player.createOrUpdate).toHaveBeenCalled()
     })
 
     test('retrieves match data from the PUBG api', async () => {

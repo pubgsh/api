@@ -16,7 +16,7 @@ This app provides a caching layer in front of the [PUBG Official API](https://do
 
 ### Configuration
 
-1. Create `.env.local` [dotenv](https://github.com/motdotla/dotenv) file in the root of the project and provide the following values:
+1. Create `.env` [dotenv](https://github.com/motdotla/dotenv) file in the root of the project and provide the following values:
 
 - `HAPI_PORT` (optional, defaults to 8080)
 - `HOST` (optional, defaults to 0.0.0.0)

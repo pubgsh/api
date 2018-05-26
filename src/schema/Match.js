@@ -51,6 +51,5 @@ export default `
 
     type Query {
         match(id: String!): Match!
-        latestMatch: Match!
     }
 `

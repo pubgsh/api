@@ -24,7 +24,8 @@ CREATE TABLE public.matches (
 
 CREATE TABLE public.match_players (
     match_id varchar(255) NOT NULL REFERENCES matches (id),
-    player_id varchar(255) NOT NULL REFERENCES players (id),
+    player_id varchar(255) NOT NULL,
+    player_name varchar(255) NOT NULL,
     roster_id varchar(255) NULL,
     stats JSON NULL,
     PRIMARY KEY (match_id, player_id)
