@@ -41,7 +41,7 @@ export async function registerGraphql() {
                     models,
                     PubgApi,
                 },
-                validationRules: [depthLimit(3)],
+                validationRules: [depthLimit(4)],
             },
             route: {
                 cors: true,

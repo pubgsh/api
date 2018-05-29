@@ -3,6 +3,7 @@ import moment from 'moment'
 import { isEmpty } from 'lodash'
 import { playerFetchQueue } from '@/rate-limit-queue.js'
 
+// TODO: This needs to expire players after some time so that they can be searched for again.
 export const knownBadPlayers = new Set()
 
 export function shouldFetch(player, playerKey) {

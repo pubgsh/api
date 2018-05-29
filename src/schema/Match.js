@@ -1,3 +1,13 @@
+export const MatchFields = `
+    id: String!
+    shardId: String!
+    gameMode: String
+    playedAt: String
+    mapName: String
+    durationSeconds: Int
+    telemetryUrl: String
+`
+
 export default `
     type MatchStats {
         DBNOs: Int!
@@ -39,13 +49,7 @@ export default `
     }
 
     type Match {
-        id: String!
-        shardId: String!
-        gameMode: String
-        playedAt: String
-        mapName: String
-        durationSeconds: Int
-        telemetryUrl: String
+        ${MatchFields}
         players: [MatchPlayer!]!
     }
 

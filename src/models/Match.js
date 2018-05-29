@@ -65,7 +65,7 @@ const Match = {
     async findAll(shardId, playerId) {
         if (!shardId || !playerId) return []
         return query(sql`
-            SELECT ${matchFields}
+            SELECT ${matchFields}, mp.stats
             FROM match_players mp
             JOIN matches m ON mp.match_id = m.id
             WHERE shard_id = ${shardId}
