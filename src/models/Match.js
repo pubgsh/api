@@ -70,7 +70,7 @@ const Match = {
             JOIN matches m ON mp.match_id = m.id
             WHERE shard_id = ${shardId}
             AND player_id = ${playerId}
-            AND game_mode NOT LIKE '%warmode%'
+            AND game_mode IN ('squad-fpp', 'duo-fpp', 'solo-fpp', 'squad', 'duo', 'solo', 'normal')
             AND m.played_at > (TIMEZONE('utc', NOW()) - INTERVAL '14 DAY')
             ORDER BY m.played_at DESC
             LIMIT 50
