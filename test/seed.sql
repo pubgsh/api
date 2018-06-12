@@ -16,6 +16,7 @@ CREATE TABLE public.matches (
     game_mode varchar(255) NULL,
     played_at timestamp NULL,
     map_name varchar(255) NULL,
+    team_size integer NULL,
     duration_seconds integer NULL,
     telemetry_url varchar(255) NULL,
     created_at timestamp NOT NULL DEFAULT timezone('utc', now()),
