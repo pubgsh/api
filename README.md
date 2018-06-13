@@ -1,6 +1,6 @@
 # pubg.sh-api
 
-The API component of [https://pubg.sh](https://pubg.sh). See also [apazzolini/pubg.sh-client](https://github.com/apazzolini/pubg.sh-client).
+The API component of [https://pubg.sh](https://pubg.sh). See also [pubgsh/client](https://github.com/pubgsh/client).
 
 ## Overview
 
