@@ -10,7 +10,7 @@ export function shouldFetch(player, playerKey) {
     return !knownBadPlayers.has(playerKey) && (
         !player
         || !player.lastFetchedAt
-        || moment.utc().diff(moment.utc(player.lastFetchedAt), 'minute') > 15
+        || moment.utc().diff(moment.utc(player.lastFetchedAt), 'minute') > 3
     )
 }
 
