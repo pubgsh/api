@@ -20,36 +20,6 @@ describe('model :: Player and Match', () => {
     test('retrieves new players from the PUBG api', async () => {
         expect(await global.__graphql(`
             query {
-                player(shardId: "pc-na", name: "BreaK") {
-                    id
-                    name
-                    matches {
-                        id
-                    }
-                }
-            }
-        `)).toMatchSnapshot()
-        expect(Player.createOrUpdate).toHaveBeenCalled()
-    })
-
-    test('re-requesting a player retrieves it from the db', async () => {
-        expect(await global.__graphql(`
-            query {
-                player(shardId: "pc-na", name: "BreaK") {
-                    id
-                    name
-                    matches {
-                        id
-                    }
-                }
-            }
-        `)).toMatchSnapshot()
-        expect(Player.createOrUpdate).not.toHaveBeenCalled()
-    })
-
-    test('requesting a player on a different shard updates the db', async () => {
-        expect(await global.__graphql(`
-            query {
                 player(shardId: "pc-eu", name: "BreaK") {
                     id
                     name
@@ -61,22 +31,36 @@ describe('model :: Player and Match', () => {
         `)).toMatchSnapshot()
 
         expect(Player.createOrUpdate).toHaveBeenCalled()
-        expect(await query(sql`SELECT * FROM player_shards`)).toHaveLength(2)
-    }, 10000)
+    })
+
+    test('re-requesting a player retrieves it from the db', async () => {
+        expect(await global.__graphql(`
+            query {
+                player(shardId: "pc-eu", name: "BreaK") {
+                    id
+                    name
+                    matches {
+                        id
+                    }
+                }
+            }
+        `)).toMatchSnapshot()
+        expect(Player.createOrUpdate).not.toHaveBeenCalled()
+    })
 
     test('re-requesting a player refreshes matches if enough time has passed', async () => {
         Player.find = jest.fn(async (...args) => {
             return {
                 id: 'account.a36bed11ed214557b0ddef9ef1a56d07',
                 name: 'BreaK',
-                shardId: 'pc-na',
+                shardId: 'pc-eu',
                 lastFetchedAt: moment.utc('2018-01-01 00:00:00'),
             }
         })
 
         await global.__graphql(`
             query {
-                player(shardId: "pc-na", name: "BreaK") {
+                player(shardId: "pc-eu", name: "BreaK") {
                     id
                     name
                     matches {

@@ -3,7 +3,7 @@ import fs from 'fs-extra'
 import { cloneDeep } from 'lodash'
 import path from 'path'
 import { Pool } from 'pg' // eslint-disable-line
-import { createPool, getPool, query } from 'pgr'
+import { createPool, getPool, query, sql } from 'pgr'
 import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
 import glob from 'glob'
@@ -92,7 +92,7 @@ createPool('default', {
 async function setupTestDb() {
     await genericPool.query(`CREATE DATABASE ${DATABASE}`)
     const seed = fs.readFileSync(path.join(__dirname, './seed.sql'), 'utf-8')
-    await query(seed)
+    await query(sql`${sql.raw(seed)}`)
 }
 
 async function teardownTestDb() {

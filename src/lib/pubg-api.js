@@ -11,6 +11,11 @@ let remaining = 10
 let reset = (Date.now() / 1000)
 let remainingTimeout = null
 
+const metrics = {
+    player: { count: 0, avgMs: 0 },
+    matches: { count: 0, avgMs: 0 },
+}
+
 function updateRateLimits(headers) {
     limit = Number(headers['x-ratelimit-limit'])
     remaining = Number(headers['x-ratelimit-remaining'])
@@ -20,6 +25,9 @@ function updateRateLimits(headers) {
 
 async function apiGet(path, shardId = 'pc-na') {
     if (!path.startsWith('matches/')) console.log(chalk.blue(`[API]: Retrieving ${shardId}/${path}`))
+
+    const m = path.startsWith('matches') ? metrics.matches : metrics.player
+    const start = Date.now()
 
     try {
         const res = await axios({
@@ -39,6 +47,10 @@ async function apiGet(path, shardId = 'pc-na') {
 
         throw e
     } finally {
+        const took = Date.now() - start
+        m.avgMs = ((m.count * m.avgMs) + took) / (m.count + 1)
+        m.count++
+
         if (!remainingTimeout && process.env.NODE_ENV !== 'test') {
             remainingTimeout = setTimeout(() => {
                 remaining = limit
@@ -59,6 +71,8 @@ function RateLimitError() {
 // -------------------------------------------------------------------------
 
 export default {
+    metrics,
+
     rateLimitStats() {
         return { limit, remaining, reset }
     },

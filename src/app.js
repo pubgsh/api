@@ -7,7 +7,7 @@ import { graphqlHapi, graphiqlHapi } from 'apollo-server-hapi'
 import { makeExecutableSchema } from 'graphql-tools'
 import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas'
 import depthLimit from 'graphql-depth-limit'
-import { pg, createPool, query } from 'pgr'
+import { pg, createPool, getPool, query, sql } from 'pgr'
 import models from '@/models'
 import PubgApi from '@/lib/pubg-api.js'
 
@@ -63,8 +63,8 @@ async function registerGraphiql() {
 }
 
 async function recreateDb() {  // eslint-disable-line
-    const seed = fs.readFileSync(path.join(__dirname, '../test/seed.sql'), 'utf-8')
-    await query(seed)
+    const seed = sql.raw(fs.readFileSync(path.join(__dirname, '../test/seed.sql'), 'utf-8'))
+    await query(sql`${seed}`)
     console.log('Recreated DB')
 }
 
@@ -98,6 +98,14 @@ async function init() {
     await server.start()
     io = socketio(server.listener)
     console.log(`Server running at: ${server.info.uri}`)
+
+    setInterval(async () => {
+        const pool = await getPool('default')
+        console.log()
+        console.log(JSON.stringify(pool.metrics, null, 2))
+        console.log(JSON.stringify(PubgApi.metrics, null, 2))
+        console.log()
+    }, 60 * 1000)
 }
 
 process.on('SIGINT', () => {

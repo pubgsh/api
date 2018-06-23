@@ -12,7 +12,8 @@ export default {
 
             if (!match || !match.gameMode) {
                 const pubgMatch = await PubgApi.getMatch(id)
-                match = await models.Match.create(pubgMatch)
+                await models.Match.create([pubgMatch])
+                match = await models.Match.find(id)
             }
 
             return match

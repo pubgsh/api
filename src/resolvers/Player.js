@@ -64,7 +64,7 @@ export default {
                     const pubgMatches = await Promise.map(idsToLoad, PubgApi.getMatch, {
                         concurrency: 10,
                     })
-                    await models.Match.createAll(pubgMatches)
+                    await models.Match.create(pubgMatches)
 
                     player = await models.Player.find(shardId, { name })
                 }

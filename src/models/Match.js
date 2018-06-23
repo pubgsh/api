@@ -81,10 +81,9 @@ const Match = {
             SELECT ${matchFields}, mp.stats
             FROM match_players mp
             JOIN matches m ON mp.match_id = m.id
-            WHERE shard_id = ${shardId}
-            AND player_id = ${playerId}
-            AND game_mode IN ('squad-fpp', 'duo-fpp', 'solo-fpp', 'squad', 'duo', 'solo', 'normal')
-            AND m.played_at > (TIMEZONE('utc', NOW()) - INTERVAL '14 DAY')
+            WHERE shard_id = ${shardId} AND player_id = ${playerId}
+                AND game_mode IN ('squad-fpp', 'duo-fpp', 'solo-fpp', 'squad', 'duo', 'solo', 'normal')
+                AND m.played_at > (TIMEZONE('utc', NOW()) - INTERVAL '14 DAY')
             ORDER BY m.played_at DESC
             LIMIT 50
         `, { debug })
@@ -96,8 +95,7 @@ const Match = {
             SELECT id, m.played_at AS "playedAt"
             FROM match_players mp
             JOIN matches m ON mp.match_id = m.id
-            WHERE shard_id = ${shardId}
-            AND player_id = ${playerId}
+            WHERE shard_id = ${shardId} AND player_id = ${playerId}
             ORDER BY m.created_at DESC
             LIMIT 50
         `, { debug })
@@ -107,14 +105,7 @@ const Match = {
         return matches.filter(m => !m.playedAt).map(m => m.id)
     },
 
-    async create(pubgMatch) {
-        await query.transaction(async tquery => {
-            await writeMatch(pubgMatch, tquery)
-        })
-        return this.find(pubgMatch.data.id)
-    },
-
-    async createAll(pubgMatches) {
+    async create(pubgMatches) {
         return query.transaction(async tquery => {
             await Promise.mapSeries(pubgMatches, m => writeMatch(m, tquery))
         })
