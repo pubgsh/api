@@ -1,0 +1,4942 @@
+{
+  "config": {
+    "transformRequest": {},
+    "transformResponse": {},
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "headers": {
+      "Accept": "application/vnd.api+json"
+    },
+    "method": "get",
+    "url": "https://api.playbattlegrounds.com/shards/pc-na/matches/82465e28-cae8-4424-8e76-ab50e75e87ba"
+  },
+  "result": [
+    200,
+    {
+      "data": {
+        "type": "match",
+        "id": "82465e28-cae8-4424-8e76-ab50e75e87ba",
+        "attributes": {
+          "mapName": "Erangel_Main",
+          "isCustomMatch": false,
+          "stats": null,
+          "gameMode": "squad-fpp",
+          "shardId": "pc-eu",
+          "tags": null,
+          "createdAt": "2018-06-17T17:53:42Z",
+          "duration": 1781,
+          "titleId": "bluehole-pubg"
+        },
+        "relationships": {
+          "assets": {
+            "data": [
+              {
+                "type": "asset",
+                "id": "b6239140-725b-11e8-8d16-0a586466990a"
+              }
+            ]
+          },
+          "rosters": {
+            "data": [
+              {
+                "type": "roster",
+                "id": "509e6680-e2a3-46c8-ba4e-e6d4a86aa6a4"
+              },
+              {
+                "type": "roster",
+                "id": "e29cb000-ad65-48e1-b50d-7edb34b58a64"
+              },
+              {
+                "type": "roster",
+                "id": "67bf926c-0bdd-41f0-94dc-be06a4bfabda"
+              },
+              {
+                "type": "roster",
+                "id": "97b6416d-38cc-40cf-a942-bab2f0afa142"
+              },
+              {
+                "type": "roster",
+                "id": "d964044b-251f-479b-ab7c-4d819bcfc2f9"
+              },
+              {
+                "type": "roster",
+                "id": "adf0d259-7662-4082-8325-6d3245e16778"
+              },
+              {
+                "type": "roster",
+                "id": "6db97497-eb24-4c34-b36b-73f46497a859"
+              },
+              {
+                "type": "roster",
+                "id": "8d2afa1d-16d7-499e-a4da-9bbdf7e2e62c"
+              },
+              {
+                "type": "roster",
+                "id": "8153b27e-92ba-4a1a-890f-dee4f6fb8da2"
+              },
+              {
+                "type": "roster",
+                "id": "cb7ec37a-464d-493c-9e27-4e363d0c51e4"
+              },
+              {
+                "type": "roster",
+                "id": "a4e41dbe-ed50-4b25-a72e-8bb320802608"
+              },
+              {
+                "type": "roster",
+                "id": "9fcfd483-2d87-4aee-8700-2e90167bbf60"
+              },
+              {
+                "type": "roster",
+                "id": "03cd682b-7e39-4d1f-9497-76e00d5fcfde"
+              },
+              {
+                "type": "roster",
+                "id": "dcc1a5ff-87ef-4e1b-9e19-e514592d67e5"
+              },
+              {
+                "type": "roster",
+                "id": "976b4c3c-530f-4c91-b54f-e762b3652ace"
+              },
+              {
+                "type": "roster",
+                "id": "0dc15749-4d69-42be-aee2-358a5d74663f"
+              },
+              {
+                "type": "roster",
+                "id": "cdaa5600-533a-4f5d-b304-96526bde979c"
+              },
+              {
+                "type": "roster",
+                "id": "9f76570a-ce63-4afd-a614-6a267fd2e224"
+              },
+              {
+                "type": "roster",
+                "id": "c9e6463c-97b7-4f56-890a-0e855d9126a1"
+              },
+              {
+                "type": "roster",
+                "id": "8b1b3ccc-6faf-4c6f-9562-9a63a5db11c4"
+              },
+              {
+                "type": "roster",
+                "id": "dc6c4007-e449-4406-9da9-74ec57d20f22"
+              },
+              {
+                "type": "roster",
+                "id": "19f763bb-fdd3-4e45-b333-ba1fefe46366"
+              },
+              {
+                "type": "roster",
+                "id": "5c9a6e0b-4def-46f5-99f6-3c7080cd450c"
+              },
+              {
+                "type": "roster",
+                "id": "e82be562-f5ad-4008-b00d-46b7899bb6cd"
+              },
+              {
+                "type": "roster",
+                "id": "6b073b97-c110-46e3-b1e0-99afca7e5f98"
+              },
+              {
+                "type": "roster",
+                "id": "d3a1190c-9810-47ab-8ab7-243998a885d0"
+              },
+              {
+                "type": "roster",
+                "id": "3faad59a-8bc5-4987-86ef-008828838e8b"
+              },
+              {
+                "type": "roster",
+                "id": "1cd6f75b-68cf-4a86-8127-9e8c606e20df"
+              },
+              {
+                "type": "roster",
+                "id": "4bb49761-f32e-42b9-9cea-00ae89e187ec"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.playbattlegrounds.com/shards/pc-eu/matches/82465e28-cae8-4424-8e76-ab50e75e87ba",
+          "schema": ""
+        }
+      },
+      "included": [
+        {
+          "type": "participant",
+          "id": "0ebb7f08-7775-418d-bfe1-572d1d3ea9a0",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 128.2005,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 25,
+              "killPoints": 1207,
+              "killPointsDelta": 12.5810652,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Godzyval",
+              "playerId": "account.6d1eb1d28177406394d119e52ec103d5",
+              "revives": 1,
+              "rideDistance": 1612.68579,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1449,
+              "vehicleDestroys": 0,
+              "walkDistance": 1892.76221,
+              "weaponsAcquired": 6,
+              "winPlace": 8,
+              "winPoints": 1582,
+              "winPointsDelta": 3.94624233
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "e1b339d8-05d1-493e-a764-4ed91d8f885b",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 1,
+              "boosts": 0,
+              "damageDealt": 165.274155,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 0,
+              "killPlace": 31,
+              "killPoints": 1030,
+              "killPointsDelta": 19.5708637,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 5,
+              "mostDamage": 0,
+              "name": "MuscleMiky",
+              "playerId": "account.96045f350d144e7cbef22102c8726227",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 851,
+              "vehicleDestroys": 0,
+              "walkDistance": 1298.516,
+              "weaponsAcquired": 8,
+              "winPlace": 14,
+              "winPoints": 1461,
+              "winPointsDelta": 4.65858841
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "dcc1a5ff-87ef-4e1b-9e19-e514592d67e5",
+          "attributes": {
+            "won": "false",
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 28,
+              "teamId": 12
+            }
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "928d0ee5-c401-419a-8cac-4c99389bf66b"
+                },
+                {
+                  "type": "participant",
+                  "id": "5d0f6c2f-8938-49ef-bfa9-99532759d500"
+                },
+                {
+                  "type": "participant",
+                  "id": "b3277387-6dc0-4ace-8ef5-79102d545d94"
+                },
+                {
+                  "type": "participant",
+                  "id": "a2d2092d-6712-4dc4-91af-cf91e3b10cb3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "1382ad8a-8ce1-46ee-9aaa-1c9c85e7cb86",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 15.105,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 74,
+              "killPoints": 1077,
+              "killPointsDelta": -9.644185,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "SuperJump86",
+              "playerId": "account.68f4f88f4bc14f8e87f6388ee6a53301",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 213,
+              "vehicleDestroys": 0,
+              "walkDistance": 205.001114,
+              "weaponsAcquired": 3,
+              "winPlace": 23,
+              "winPoints": 1535,
+              "winPointsDelta": -7.10989857
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "8b1b3ccc-6faf-4c6f-9562-9a63a5db11c4",
+          "attributes": {
+            "stats": {
+              "rank": 11,
+              "teamId": 22
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "a5d60133-cefb-491f-aa9b-d16d7c8c23ab"
+                },
+                {
+                  "type": "participant",
+                  "id": "1a315bbd-56d1-4f49-90c7-f3322854ee98"
+                },
+                {
+                  "type": "participant",
+                  "id": "14b40128-40ce-49ce-a091-a793b8d05586"
+                },
+                {
+                  "type": "participant",
+                  "id": "544317db-7b3c-48b4-94e3-8ed19174aa07"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "cc924273-04d8-458c-bf42-23c0c82b7f0d",
+          "attributes": {
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 91,
+              "killPoints": 1443,
+              "killPointsDelta": -27.0562572,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Zettron",
+              "playerId": "account.d788670bb665408db8922b093ac123dc",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 158,
+              "vehicleDestroys": 0,
+              "walkDistance": 0,
+              "weaponsAcquired": 0,
+              "winPlace": 29,
+              "winPoints": 1607,
+              "winPointsDelta": -15.5996895
+            },
+            "actor": ""
+          }
+        },
+        {
+          "type": "roster",
+          "id": "e29cb000-ad65-48e1-b50d-7edb34b58a64",
+          "attributes": {
+            "stats": {
+              "rank": 4,
+              "teamId": 7
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "4d2dbb8b-9e00-4e46-9d94-7c22971211af"
+                },
+                {
+                  "type": "participant",
+                  "id": "805907d3-2f78-47d9-85dc-ed19818a560c"
+                },
+                {
+                  "type": "participant",
+                  "id": "68cba53a-2029-4cc9-8058-60ec2c09b7c3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "67bf926c-0bdd-41f0-94dc-be06a4bfabda",
+          "attributes": {
+            "stats": {
+              "rank": 2,
+              "teamId": 6
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "61f26c9e-cc2e-4afa-ac2e-7199e779ca8c"
+                },
+                {
+                  "type": "participant",
+                  "id": "0891b456-92a8-4100-a144-7d6c57f61ef6"
+                },
+                {
+                  "type": "participant",
+                  "id": "e0de8759-9907-4f3d-b9a8-794297924bb2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "d964044b-251f-479b-ab7c-4d819bcfc2f9",
+          "attributes": {
+            "stats": {
+              "rank": 8,
+              "teamId": 1
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "0ebb7f08-7775-418d-bfe1-572d1d3ea9a0"
+                },
+                {
+                  "type": "participant",
+                  "id": "f5ae7494-d09f-4284-a6f6-b18b1638f2f6"
+                },
+                {
+                  "type": "participant",
+                  "id": "0d9cf990-dd3a-42f5-9c77-a6d6a391d456"
+                },
+                {
+                  "type": "participant",
+                  "id": "b9670ebc-8ed6-4b17-b194-cbfcda484de5"
+                }
+              ]
+            },
+            "team": {
+              "data": null
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "1cd6f75b-68cf-4a86-8127-9e8c606e20df",
+          "attributes": {
+            "stats": {
+              "rank": 19,
+              "teamId": 29
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "9048eeb0-fd2f-4fde-8638-cb203a665d01"
+                },
+                {
+                  "type": "participant",
+                  "id": "d5855552-2820-41d9-b4ec-1a5b2a714777"
+                },
+                {
+                  "type": "participant",
+                  "id": "2eefc62e-2e52-43b3-8153-c70508096d49"
+                },
+                {
+                  "type": "participant",
+                  "id": "0cbd1868-5add-42d3-9361-df1d814af450"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "08deb491-b72c-4450-ac98-e8f19902ae05",
+          "attributes": {
+            "stats": {
+              "DBNOs": 4,
+              "assists": 2,
+              "boosts": 5,
+              "damageDealt": 423.9555,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 3,
+              "killPlace": 4,
+              "killPoints": 1380,
+              "killPointsDelta": 28.9575844,
+              "killStreaks": 1,
+              "kills": 4,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 87,
+              "mostDamage": 0,
+              "name": "MekhaniK",
+              "playerId": "account.31004d9fcf1f4a8bba3a1ecdc5c89177",
+              "revives": 0,
+              "rideDistance": 3383.96436,
+              "roadKills": 0,
+              "swimDistance": 2.89919758,
+              "teamKills": 0,
+              "timeSurvived": 1597,
+              "vehicleDestroys": 0,
+              "walkDistance": 2508.997,
+              "weaponsAcquired": 5,
+              "winPlace": 5,
+              "winPoints": 1434,
+              "winPointsDelta": 11.1623993
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "2bfc464a-6837-4eaa-8081-24d880a02890",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 100,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 23,
+              "killPoints": 1295,
+              "killPointsDelta": 8.526993,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 21,
+              "mostDamage": 0,
+              "name": "skdude",
+              "playerId": "account.a133e44dd60a4c44bfb51c0be9d43efd",
+              "revives": 0,
+              "rideDistance": 1628.53345,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1720,
+              "vehicleDestroys": 0,
+              "walkDistance": 2139.98486,
+              "weaponsAcquired": 6,
+              "winPlace": 3,
+              "winPoints": 1612,
+              "winPointsDelta": 6.97835732
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "dbf6cf3f-3272-4956-b268-4822ac126f71",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 3,
+              "damageDealt": 170.839142,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 3,
+              "killPlace": 27,
+              "killPoints": 1137,
+              "killPointsDelta": 16.45944,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 7,
+              "mostDamage": 0,
+              "name": "TRGoGo",
+              "playerId": "account.41ef042daaff4670a03e0beb46b94a5a",
+              "revives": 0,
+              "rideDistance": 1761.9137,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1410,
+              "vehicleDestroys": 0,
+              "walkDistance": 1905.48926,
+              "weaponsAcquired": 7,
+              "winPlace": 9,
+              "winPoints": 1507,
+              "winPointsDelta": 5.85116625
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "8c166b46-e4f1-4a8f-ae55-150c006a98b0",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 1,
+              "boosts": 2,
+              "damageDealt": 196.206543,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 6,
+              "killPlace": 18,
+              "killPoints": 1189,
+              "killPointsDelta": 19.4901657,
+              "killStreaks": 2,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 10,
+              "mostDamage": 0,
+              "name": "Ebolaneger",
+              "playerId": "account.2fe1a6bb1bcb45b0a1e0630a5de41040",
+              "revives": 0,
+              "rideDistance": 2871.48926,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 691,
+              "vehicleDestroys": 0,
+              "walkDistance": 604.5095,
+              "weaponsAcquired": 4,
+              "winPlace": 16,
+              "winPoints": 1514,
+              "winPointsDelta": 0.2542252
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "9048eeb0-fd2f-4fde-8638-cb203a665d01",
+          "attributes": {
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 233.366837,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 62,
+              "killPoints": 1000,
+              "killPointsDelta": 0.15939343,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "FNC_Galaxy",
+              "playerId": "account.c60c28d11ef5458283a1e510cff8237a",
+              "revives": 0,
+              "rideDistance": 196.709137,
+              "roadKills": 0,
+              "swimDistance": 44.6726532,
+              "teamKills": 2,
+              "timeSurvived": 1337,
+              "vehicleDestroys": 0,
+              "walkDistance": 422.0336,
+              "weaponsAcquired": 2,
+              "winPlace": 19,
+              "winPoints": 1500,
+              "winPointsDelta": -1.313421
+            },
+            "actor": ""
+          }
+        },
+        {
+          "type": "participant",
+          "id": "4d2dbb8b-9e00-4e46-9d94-7c22971211af",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 3,
+              "damageDealt": 274.415466,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 4,
+              "killPlace": 12,
+              "killPoints": 1312,
+              "killPointsDelta": 16.5576973,
+              "killStreaks": 1,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 71,
+              "mostDamage": 0,
+              "name": "viviorelll",
+              "playerId": "account.74e5fbffe6524a0d8a9c6e04d6c15e68",
+              "revives": 3,
+              "rideDistance": 4683.628,
+              "roadKills": 0,
+              "swimDistance": 27.8461533,
+              "teamKills": 0,
+              "timeSurvived": 1647,
+              "vehicleDestroys": 0,
+              "walkDistance": 3023.7876,
+              "weaponsAcquired": 7,
+              "winPlace": 4,
+              "winPoints": 1589,
+              "winPointsDelta": 6.46757936
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "f5ae7494-d09f-4284-a6f6-b18b1638f2f6",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 417.8184,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 49,
+              "killPoints": 1295,
+              "killPointsDelta": -8.301551,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Jack_Palmer",
+              "playerId": "account.95fb4468a9b64c05929ed9a438528977",
+              "revives": 0,
+              "rideDistance": 1844.80713,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1449,
+              "vehicleDestroys": 0,
+              "walkDistance": 2038.82129,
+              "weaponsAcquired": 5,
+              "winPlace": 8,
+              "winPoints": 1552,
+              "winPointsDelta": 4.929542
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "b2e92a43-62c9-453d-a1d4-b37d2197625a",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 1,
+              "boosts": 2,
+              "damageDealt": 225.285065,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 4,
+              "killPlace": 11,
+              "killPoints": 1259,
+              "killPointsDelta": 22.76269,
+              "killStreaks": 1,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 283,
+              "mostDamage": 0,
+              "name": "KEKEOFFICIALS",
+              "playerId": "account.de6fbf5461ad491aa8e86ec3d88c9088",
+              "revives": 1,
+              "rideDistance": 1626.80457,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1722,
+              "vehicleDestroys": 0,
+              "walkDistance": 2309.82544,
+              "weaponsAcquired": 4,
+              "winPlace": 3,
+              "winPoints": 1614,
+              "winPointsDelta": 6.99483347
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "4bb49761-f32e-42b9-9cea-00ae89e187ec",
+          "attributes": {
+            "won": "false",
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 6,
+              "teamId": 25
+            }
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "7e4c4f3c-f598-49be-91b7-b0aa933e452d"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "805907d3-2f78-47d9-85dc-ed19818a560c",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 5,
+              "damageDealt": 263.950775,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 5,
+              "killPlace": 13,
+              "killPoints": 1382,
+              "killPointsDelta": 11.5248528,
+              "killStreaks": 2,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 53,
+              "mostDamage": 0,
+              "name": "Ciolan",
+              "playerId": "account.726a9460f8fa4ca19856af7bd5dd5f25",
+              "revives": 0,
+              "rideDistance": 5171.74365,
+              "roadKills": 0,
+              "swimDistance": 31.4793987,
+              "teamKills": 0,
+              "timeSurvived": 1635,
+              "vehicleDestroys": 0,
+              "walkDistance": 2326.00317,
+              "weaponsAcquired": 6,
+              "winPlace": 4,
+              "winPoints": 1643,
+              "winPointsDelta": 4.797179
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "2d1a26dc-60ef-4939-826d-b31262a8679e",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 3,
+              "damageDealt": 195.033691,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 4,
+              "killPlace": 8,
+              "killPoints": 1122,
+              "killPointsDelta": 38.20744,
+              "killStreaks": 1,
+              "kills": 3,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 16,
+              "mostDamage": 0,
+              "name": "Chubi10",
+              "playerId": "account.0b4c7ae1b48844fdbcdd336a20863df0",
+              "revives": 1,
+              "rideDistance": 1008.288,
+              "roadKills": 0,
+              "swimDistance": 3.57372856,
+              "teamKills": 0,
+              "timeSurvived": 1147,
+              "vehicleDestroys": 0,
+              "walkDistance": 2847.67432,
+              "weaponsAcquired": 6,
+              "winPlace": 11,
+              "winPoints": 1331,
+              "winPointsDelta": 10.78957
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "8cf29ab1-8b82-484d-8a42-b4802775cb9a",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 130.1,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 66,
+              "killPoints": 1141,
+              "killPointsDelta": -7.761006,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "MyCaterpillar",
+              "playerId": "account.067eb51e6a3149bb8f3acbbad3c61c3e",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 366,
+              "vehicleDestroys": 0,
+              "walkDistance": 474.770935,
+              "weaponsAcquired": 4,
+              "winPlace": 19,
+              "winPoints": 1500,
+              "winPointsDelta": -1.43207622
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "79e484d9-6e0b-4db1-86d7-ed7c859cd216",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 130.1,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 4,
+              "killPlace": 75,
+              "killPoints": 1239,
+              "killPointsDelta": -17.6980534,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Do6pld",
+              "playerId": "account.617c98893c6540e38aa42ac9175f734f",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 207,
+              "vehicleDestroys": 0,
+              "walkDistance": 195.775787,
+              "weaponsAcquired": 1,
+              "winPlace": 23,
+              "winPoints": 1509,
+              "winPointsDelta": -6.29111958
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "a4c6c2da-b6f2-4ff7-bc46-c20bf52bbc51",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 85,
+              "killPoints": 966,
+              "killPointsDelta": -8.702741,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "BtotheRizzle",
+              "playerId": "account.6ebb7327cbfd42f8be5c13bbb0d53de1",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 151,
+              "vehicleDestroys": 0,
+              "walkDistance": 52.53353,
+              "weaponsAcquired": 2,
+              "winPlace": 26,
+              "winPoints": 1478,
+              "winPointsDelta": -7.95071554
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "adf0d259-7662-4082-8325-6d3245e16778",
+          "attributes": {
+            "stats": {
+              "rank": 7,
+              "teamId": 5
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "50126065-c190-4259-80f8-8d0dd4dc6234"
+                },
+                {
+                  "type": "participant",
+                  "id": "a3074111-8f30-4a5c-bcf1-9570934f1b03"
+                },
+                {
+                  "type": "participant",
+                  "id": "b5163a7b-db44-4457-96dd-41eb00bc895b"
+                },
+                {
+                  "type": "participant",
+                  "id": "c3fdc5c7-3212-426a-aa62-943e48479711"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "19f763bb-fdd3-4e45-b333-ba1fefe46366",
+          "attributes": {
+            "won": "false",
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 23,
+              "teamId": 23
+            }
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "e1c332b4-7a84-4a34-a995-f6716da08953"
+                },
+                {
+                  "type": "participant",
+                  "id": "1382ad8a-8ce1-46ee-9aaa-1c9c85e7cb86"
+                },
+                {
+                  "type": "participant",
+                  "id": "79e484d9-6e0b-4db1-86d7-ed7c859cd216"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "d3a1190c-9810-47ab-8ab7-243998a885d0",
+          "attributes": {
+            "stats": {
+              "rank": 12,
+              "teamId": 28
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "02592cd7-7661-446b-a061-a51458b05896"
+                },
+                {
+                  "type": "participant",
+                  "id": "e3b5e52d-71cf-4105-b11a-631f79f9591a"
+                },
+                {
+                  "type": "participant",
+                  "id": "b9b3490b-95b0-41a0-bf3b-8254318db3a8"
+                },
+                {
+                  "type": "participant",
+                  "id": "6ef3852c-9f66-4343-935a-b7a1f7422e85"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "a3074111-8f30-4a5c-bcf1-9570934f1b03",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 23.0319252,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 47,
+              "killPoints": 1212,
+              "killPointsDelta": -2.05276918,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Lynnez",
+              "playerId": "account.57f9a9b5d9fd4fa1acb3d1c4f3f0bdad",
+              "revives": 0,
+              "rideDistance": 1178.34619,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1164,
+              "vehicleDestroys": 0,
+              "walkDistance": 2203.126,
+              "weaponsAcquired": 4,
+              "winPlace": 7,
+              "winPoints": 1511,
+              "winPointsDelta": 8.250642
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "c4087b4f-56fc-484e-a03f-4f48826b3682",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 88.51277,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 67,
+              "killPoints": 984,
+              "killPointsDelta": -2.52660728,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "LJUDJACI055",
+              "playerId": "account.112657e8337b41f6aa138135b795aa99",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 317,
+              "vehicleDestroys": 0,
+              "walkDistance": 333.722931,
+              "weaponsAcquired": 4,
+              "winPlace": 19,
+              "winPoints": 1479,
+              "winPointsDelta": -1.18680727
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "ae69d6fc-3723-4be1-9fe5-9eae27aa94d5",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 85.68001,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 68,
+              "killPoints": 1028,
+              "killPointsDelta": -4.63439655,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Sanyogg",
+              "playerId": "account.e8ed6fa432bc4f1d8a9b0928c5779c40",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 223,
+              "vehicleDestroys": 0,
+              "walkDistance": 205.1344,
+              "weaponsAcquired": 2,
+              "winPlace": 20,
+              "winPoints": 1509,
+              "winPointsDelta": -3.65410662
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "4c925be9-9a2d-477a-9fcb-03ee8a74e414",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 100,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 94,
+              "killPoints": 1848,
+              "killPointsDelta": 0,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "BreaK",
+              "playerId": "account.a36bed11ed214557b0ddef9ef1a56d07",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 1,
+              "timeSurvived": 81,
+              "vehicleDestroys": 0,
+              "walkDistance": 26.6897945,
+              "weaponsAcquired": 0,
+              "winPlace": 29,
+              "winPoints": 1649,
+              "winPointsDelta": 0
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "2eefc62e-2e52-43b3-8153-c70508096d49",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 9.112351,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 65,
+              "killPoints": 1000,
+              "killPointsDelta": -1.4457128,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Divinarchy",
+              "playerId": "account.61b5563508cb43e88820d0fcd5834814",
+              "revives": 0,
+              "rideDistance": 2133.40869,
+              "roadKills": 0,
+              "swimDistance": 25.9953861,
+              "teamKills": 0,
+              "timeSurvived": 390,
+              "vehicleDestroys": 0,
+              "walkDistance": 317.041718,
+              "weaponsAcquired": 1,
+              "winPlace": 19,
+              "winPoints": 1500,
+              "winPointsDelta": -1.313421
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "9fcfd483-2d87-4aee-8700-2e90167bbf60",
+          "attributes": {
+            "stats": {
+              "rank": 15,
+              "teamId": 14
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "f8618986-b5e2-4945-aa30-3dd308aa4818"
+                },
+                {
+                  "type": "participant",
+                  "id": "7908b81c-323f-4aa6-b5dc-7240555d424e"
+                },
+                {
+                  "type": "participant",
+                  "id": "cb35b74e-1bee-40c0-b914-9abae0444a1a"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "c7fc46e4-7878-4360-8dc2-f1d13ba297c7",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 3,
+              "boosts": 3,
+              "damageDealt": 570.4928,
+              "deathType": "alive",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 3,
+              "killPoints": 1188,
+              "killPointsDelta": 51.03673,
+              "killStreaks": 3,
+              "kills": 4,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 145,
+              "mostDamage": 0,
+              "name": "shoqa",
+              "playerId": "account.1d2fc10fc75949368aa5b7de2f5e82ab",
+              "revives": 2,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1781,
+              "vehicleDestroys": 0,
+              "walkDistance": 5396.84863,
+              "weaponsAcquired": 4,
+              "winPlace": 1,
+              "winPoints": 1518,
+              "winPointsDelta": 11.64306
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "51d9c788-0fdf-40fe-a6e9-8be2520feac2",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 1,
+              "boosts": 1,
+              "damageDealt": 60.8999977,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 70,
+              "killPoints": 1153,
+              "killPointsDelta": -11.2334747,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Aluna",
+              "playerId": "account.6089fbf60d874b46875ebd01a17350d6",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 186,
+              "vehicleDestroys": 0,
+              "walkDistance": 108.257385,
+              "weaponsAcquired": 2,
+              "winPlace": 20,
+              "winPoints": 1537,
+              "winPointsDelta": -4.582947
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "14782fcb-303e-47f2-aff7-ed8cbcab0bfc",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 93.6000061,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 84,
+              "killPoints": 1000,
+              "killPointsDelta": -10.6459236,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "ArroWvV",
+              "playerId": "account.e8726777110e43a39567b4f103b2cf3f",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 105,
+              "vehicleDestroys": 0,
+              "walkDistance": 10.0579834,
+              "weaponsAcquired": 0,
+              "winPlace": 25,
+              "winPoints": 1500,
+              "winPointsDelta": -8.779776
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "60586372-26a3-40c0-98e2-1bea294e1020",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 3,
+              "assists": 0,
+              "boosts": 4,
+              "damageDealt": 210.415878,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 11,
+              "killPlace": 26,
+              "killPoints": 1296,
+              "killPointsDelta": 9.443966,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 39,
+              "mostDamage": 0,
+              "name": "battya1",
+              "playerId": "account.f37a432d733c4f75beca68f147f5b68c",
+              "revives": 1,
+              "rideDistance": 1756.92358,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1410,
+              "vehicleDestroys": 0,
+              "walkDistance": 1758.58472,
+              "weaponsAcquired": 2,
+              "winPlace": 9,
+              "winPoints": 1519,
+              "winPointsDelta": 5.76372862
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "875b9003-8a4a-4115-ac1a-e62a3d4b1938",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 69.9,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 72,
+              "killPoints": 1022,
+              "killPointsDelta": -6.226463,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Terun223",
+              "playerId": "account.f0235a3bdf4549bd9a7ff15db8c8510d",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 182,
+              "vehicleDestroys": 0,
+              "walkDistance": 161.164536,
+              "weaponsAcquired": 3,
+              "winPlace": 22,
+              "winPoints": 1495,
+              "winPointsDelta": -4.33191442
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "14f84101-1089-402a-a6fc-b4b5c7693303",
+          "attributes": {
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 100,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 43,
+              "killPoints": 1345,
+              "killPointsDelta": -7.521486,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 4,
+              "mostDamage": 0,
+              "name": "Xet111",
+              "playerId": "account.27e9843177c84330aaf6e129141c8a5f",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 148,
+              "vehicleDestroys": 0,
+              "walkDistance": 32.1925545,
+              "weaponsAcquired": 2,
+              "winPlace": 28,
+              "winPoints": 1589,
+              "winPointsDelta": -13.98518
+            },
+            "actor": ""
+          }
+        },
+        {
+          "type": "participant",
+          "id": "1968a9e5-f769-4571-85e9-a9574b25010a",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 88,
+              "killPoints": 1083,
+              "killPointsDelta": -14.28729,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Ezek20",
+              "playerId": "account.4a5f678a3a29410388428e12cf678a63",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 139,
+              "vehicleDestroys": 0,
+              "walkDistance": 162.772339,
+              "weaponsAcquired": 2,
+              "winPlace": 28,
+              "winPoints": 1475,
+              "winPointsDelta": -10.1742353
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "64d3ee50-11d2-48de-83cd-7099a4c012e1",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 1,
+              "boosts": 6,
+              "damageDealt": 261.653259,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 7,
+              "killPlace": 20,
+              "killPoints": 1202,
+              "killPointsDelta": 16.5454922,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 13,
+              "mostDamage": 0,
+              "name": "dhark_aka_d_hork",
+              "playerId": "account.badc1592374b41aca17212101873a770",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1691,
+              "vehicleDestroys": 0,
+              "walkDistance": 5258.43457,
+              "weaponsAcquired": 4,
+              "winPlace": 1,
+              "winPoints": 1527,
+              "winPointsDelta": 11.3488531
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "0d9cf990-dd3a-42f5-9c77-a6d6a391d456",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 50,
+              "killPoints": 1259,
+              "killPointsDelta": -7.028911,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "FrogzQc",
+              "playerId": "account.94d92ccb0f0045ef92ae423c53409848",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 270,
+              "vehicleDestroys": 0,
+              "walkDistance": 210.588715,
+              "weaponsAcquired": 3,
+              "winPlace": 8,
+              "winPoints": 1575,
+              "winPointsDelta": 4.18039465
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "5af9a9ef-e613-459e-86d6-2850276f0487",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 139.27,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 0,
+              "killPlace": 34,
+              "killPoints": 1461,
+              "killPointsDelta": -7.223193,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 1,
+              "mostDamage": 0,
+              "name": "XDaltonX",
+              "playerId": "account.d06e76124fdd4cf3bfc3f1b70ce2780f",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 513,
+              "vehicleDestroys": 0,
+              "walkDistance": 928.66156,
+              "weaponsAcquired": 7,
+              "winPlace": 19,
+              "winPoints": 1456,
+              "winPointsDelta": -0.0654808953
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "54949ddc-ed4c-47b8-afbb-7870ec44c388",
+          "attributes": {
+            "stats": {
+              "DBNOs": 3,
+              "assists": 0,
+              "boosts": 2,
+              "damageDealt": 426.54953,
+              "deathType": "byplayer",
+              "headshotKills": 3,
+              "heals": 3,
+              "killPlace": 2,
+              "killPoints": 1000,
+              "killPointsDelta": 86.4609146,
+              "killStreaks": 2,
+              "kills": 5,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 65,
+              "mostDamage": 0,
+              "name": "hedgehog84",
+              "playerId": "account.72b3e2fd4cc045c7a65cee789a8d4033",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 548,
+              "vehicleDestroys": 0,
+              "walkDistance": 462.493744,
+              "weaponsAcquired": 4,
+              "winPlace": 17,
+              "winPoints": 1500,
+              "winPointsDelta": 0.539165735
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "798fad17-adf0-431e-a96d-708091b77642",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 99.99999,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 42,
+              "killPoints": 1236,
+              "killPointsDelta": -0.5994708,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 5,
+              "mostDamage": 0,
+              "name": "roo17",
+              "playerId": "account.ce3bc3ecb34f4b0584798f9b93284a8e",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 135,
+              "vehicleDestroys": 0,
+              "walkDistance": 30.076088,
+              "weaponsAcquired": 1,
+              "winPlace": 27,
+              "winPoints": 1461,
+              "winPointsDelta": -8.325388
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "ba083cd7-6054-48a2-92c3-a1e46582e3f3",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 78,
+              "killPoints": 1000,
+              "killPointsDelta": -7.77141142,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "andreaskiller123",
+              "playerId": "account.255ec1cf9a8f46438fed97e2ce1a2b53",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 173,
+              "vehicleDestroys": 0,
+              "walkDistance": 112.370117,
+              "weaponsAcquired": 1,
+              "winPlace": 24,
+              "winPoints": 1500,
+              "winPointsDelta": -7.486701
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "50126065-c190-4259-80f8-8d0dd4dc6234",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 1,
+              "boosts": 1,
+              "damageDealt": 180.452,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 24,
+              "killPoints": 1091,
+              "killPointsDelta": 22.5856934,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 18,
+              "mostDamage": 0,
+              "name": "Hivirus",
+              "playerId": "account.ed2f3cd031e2473d971116d861ea1f0e",
+              "revives": 0,
+              "rideDistance": 2883.61084,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1440,
+              "vehicleDestroys": 0,
+              "walkDistance": 2747.333,
+              "weaponsAcquired": 7,
+              "winPlace": 7,
+              "winPoints": 1498,
+              "winPointsDelta": 8.654278
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "de522403-200a-4ca8-adf2-e9b27b7a443f",
+          "attributes": {
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 100,
+              "deathType": "suicide",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 86,
+              "killPoints": 1288,
+              "killPointsDelta": -21.0846272,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Quiim",
+              "playerId": "account.07758f134a964b408846f96405b16685",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 1,
+              "timeSurvived": 149,
+              "vehicleDestroys": 0,
+              "walkDistance": 82.96805,
+              "weaponsAcquired": 2,
+              "winPlace": 27,
+              "winPoints": 1471,
+              "winPointsDelta": -8.4903965
+            },
+            "actor": ""
+          }
+        },
+        {
+          "type": "participant",
+          "id": "58eb9822-78c2-44d3-9136-4ca3d7988367",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 2,
+              "damageDealt": 100,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 30,
+              "killPoints": 986,
+              "killPointsDelta": 22.8354969,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Ibims1Killerlol",
+              "playerId": "account.8853e1e048e34275b66d14f0874d4e13",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 936,
+              "vehicleDestroys": 0,
+              "walkDistance": 1443.89771,
+              "weaponsAcquired": 8,
+              "winPlace": 14,
+              "winPoints": 1478,
+              "winPointsDelta": 3.74667454
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "52652086-2af1-4d13-8275-926c0d3719e3",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 2,
+              "damageDealt": 200,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 3,
+              "killPlace": 17,
+              "killPoints": 1047,
+              "killPointsDelta": 30.8892632,
+              "killStreaks": 1,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 16,
+              "mostDamage": 0,
+              "name": "Hwy_Enigma",
+              "playerId": "account.5c44c6665c6c45ef9defbfcdb2800a25",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 962,
+              "vehicleDestroys": 0,
+              "walkDistance": 1428.7478,
+              "weaponsAcquired": 6,
+              "winPlace": 14,
+              "winPoints": 1478,
+              "winPointsDelta": 3.76359725
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "b3277387-6dc0-4ace-8ef5-79102d545d94",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 25.8699989,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 38,
+              "killPoints": 1161,
+              "killPointsDelta": 5.814504,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 1,
+              "mostDamage": 0,
+              "name": "Staefe",
+              "playerId": "account.ed50c73fb6ed4c35bfde2da23591c75e",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 539,
+              "vehicleDestroys": 0,
+              "walkDistance": 212.773438,
+              "weaponsAcquired": 3,
+              "winPlace": 23,
+              "winPoints": 1534,
+              "winPointsDelta": -6.9267354
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "03cd682b-7e39-4d1f-9497-76e00d5fcfde",
+          "attributes": {
+            "stats": {
+              "rank": 20,
+              "teamId": 16
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "51d9c788-0fdf-40fe-a6e9-8be2520feac2"
+                },
+                {
+                  "type": "participant",
+                  "id": "ae69d6fc-3723-4be1-9fe5-9eae27aa94d5"
+                },
+                {
+                  "type": "participant",
+                  "id": "01d8cef2-b808-480f-a5b7-2ee43a09272d"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "7e4c4f3c-f598-49be-91b7-b0aa933e452d",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 22.05,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 46,
+              "killPoints": 1088,
+              "killPointsDelta": 4.653154,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "vicenta0",
+              "playerId": "account.61bf90bcb80b4521b1053b00108e3f1e",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1511,
+              "vehicleDestroys": 0,
+              "walkDistance": 1951.14331,
+              "weaponsAcquired": 7,
+              "winPlace": 6,
+              "winPoints": 1465,
+              "winPointsDelta": 9.452074
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "9f76570a-ce63-4afd-a614-6a267fd2e224",
+          "attributes": {
+            "stats": {
+              "rank": 29,
+              "teamId": 19
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "7e4983e1-321e-43ba-9f70-fdf63b9a2a79"
+                },
+                {
+                  "type": "participant",
+                  "id": "4c925be9-9a2d-477a-9fcb-03ee8a74e414"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "68cba53a-2029-4cc9-8058-60ec2c09b7c3",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 1,
+              "boosts": 6,
+              "damageDealt": 207.138,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 9,
+              "killPlace": 45,
+              "killPoints": 1226,
+              "killPointsDelta": -2.39168763,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "KOkonstantynOK",
+              "playerId": "account.9f98adf63f3c4b8cb664b482da675cd6",
+              "revives": 0,
+              "rideDistance": 4424.564,
+              "roadKills": 0,
+              "swimDistance": 28.1546345,
+              "teamKills": 0,
+              "timeSurvived": 1605,
+              "vehicleDestroys": 0,
+              "walkDistance": 2599.102,
+              "weaponsAcquired": 4,
+              "winPlace": 4,
+              "winPoints": 1552,
+              "winPointsDelta": 7.65192461
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "01d8cef2-b808-480f-a5b7-2ee43a09272d",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 82.78001,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 36,
+              "killPoints": 1228,
+              "killPointsDelta": 3.21638083,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 2,
+              "mostDamage": 0,
+              "name": "Niicha",
+              "playerId": "account.496b54173400409bab6fca53d23a596d",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 173,
+              "vehicleDestroys": 0,
+              "walkDistance": 49.5967331,
+              "weaponsAcquired": 1,
+              "winPlace": 20,
+              "winPoints": 1537,
+              "winPointsDelta": -4.582947
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "544317db-7b3c-48b4-94e3-8ed19174aa07",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 207.443085,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 2,
+              "killPlace": 15,
+              "killPoints": 1359,
+              "killPointsDelta": 13.094902,
+              "killStreaks": 1,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 161,
+              "mostDamage": 0,
+              "name": "NewbieNOOB",
+              "playerId": "account.e8a515fcc1b341539619c90ef47cd4ce",
+              "revives": 0,
+              "rideDistance": 757.1421,
+              "roadKills": 0,
+              "swimDistance": 14.80362,
+              "teamKills": 0,
+              "timeSurvived": 1199,
+              "vehicleDestroys": 0,
+              "walkDistance": 3726.74438,
+              "weaponsAcquired": 4,
+              "winPlace": 11,
+              "winPoints": 1497,
+              "winPointsDelta": 5.02833271
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "e1c332b4-7a84-4a34-a995-f6716da08953",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 69.66,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 73,
+              "killPoints": 1153,
+              "killPointsDelta": -12.3915071,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "rqzzyD",
+              "playerId": "account.3658f83efe1446a59065e15ebe0d1800",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 213,
+              "vehicleDestroys": 0,
+              "walkDistance": 128.539627,
+              "weaponsAcquired": 3,
+              "winPlace": 23,
+              "winPoints": 1526,
+              "winPointsDelta": -6.83351851
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "02592cd7-7661-446b-a061-a51458b05896",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 127.290871,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 1,
+              "killPlace": 28,
+              "killPoints": 1143,
+              "killPointsDelta": 16.2312717,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 5,
+              "mostDamage": 0,
+              "name": "kostuch77",
+              "playerId": "account.81b0973d51eb4bb1ac771afae5a44424",
+              "revives": 0,
+              "rideDistance": 5078.755,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1138,
+              "vehicleDestroys": 0,
+              "walkDistance": 1413.73547,
+              "weaponsAcquired": 4,
+              "winPlace": 12,
+              "winPoints": 1489,
+              "winPointsDelta": 4.44364262
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "e3b5e52d-71cf-4105-b11a-631f79f9591a",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 277.2259,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 0,
+              "killPlace": 16,
+              "killPoints": 1192,
+              "killPointsDelta": 21.0503521,
+              "killStreaks": 1,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 10,
+              "mostDamage": 0,
+              "name": "ArturG359",
+              "playerId": "account.266e74db9199411e987788d4dd56f9de",
+              "revives": 2,
+              "rideDistance": 5145.612,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1148,
+              "vehicleDestroys": 0,
+              "walkDistance": 1629.21777,
+              "weaponsAcquired": 5,
+              "winPlace": 12,
+              "winPoints": 1495,
+              "winPointsDelta": 4.17271042
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "c9e6463c-97b7-4f56-890a-0e855d9126a1",
+          "attributes": {
+            "won": "false",
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 27,
+              "teamId": 20
+            }
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "de522403-200a-4ca8-adf2-e9b27b7a443f"
+                },
+                {
+                  "type": "participant",
+                  "id": "798fad17-adf0-431e-a96d-708091b77642"
+                },
+                {
+                  "type": "participant",
+                  "id": "1968a9e5-f769-4571-85e9-a9574b25010a"
+                },
+                {
+                  "type": "participant",
+                  "id": "6d78d71e-cf13-4e02-b884-2671d90f6bc3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "14c634d3-ec84-4a8f-af82-6086470372d1",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 155.977859,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 33,
+              "killPoints": 1166,
+              "killPointsDelta": 9.346267,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 2,
+              "mostDamage": 0,
+              "name": "SiropeSWE",
+              "playerId": "account.7bce47843f7e4b3cbc58f188991e89c7",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 548,
+              "vehicleDestroys": 0,
+              "walkDistance": 661.8182,
+              "weaponsAcquired": 5,
+              "winPlace": 17,
+              "winPoints": 1521,
+              "winPointsDelta": -0.103453577
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "58084dd1-9c1e-487d-ae60-b65faf8e5e73",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 64.1475143,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 60,
+              "killPoints": 1246,
+              "killPointsDelta": -11.34211,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "RainbowBean",
+              "playerId": "account.cb83f1c8374742eeae7122251e5ff85d",
+              "revives": 0,
+              "rideDistance": 1871.80078,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 479,
+              "vehicleDestroys": 0,
+              "walkDistance": 543.825562,
+              "weaponsAcquired": 4,
+              "winPlace": 16,
+              "winPoints": 1525,
+              "winPointsDelta": -0.10198652
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "b9b3490b-95b0-41a0-bf3b-8254318db3a8",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 48.94368,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 55,
+              "killPoints": 1019,
+              "killPointsDelta": 1.47671,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "MagicHoppy",
+              "playerId": "account.b270508c2336428dba0db1b6405d1764",
+              "revives": 0,
+              "rideDistance": 5296.86426,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1106,
+              "vehicleDestroys": 0,
+              "walkDistance": 1329.06921,
+              "weaponsAcquired": 7,
+              "winPlace": 12,
+              "winPoints": 1492,
+              "winPointsDelta": 4.346795
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "9bfa68db-5ec3-47e5-b09d-d9ee54775d33",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 55.71214,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 61,
+              "killPoints": 1056,
+              "killPointsDelta": -2.75704956,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "ziaht",
+              "playerId": "account.3bada45808544836a05a88ae5a481697",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 150,
+              "vehicleDestroys": 0,
+              "walkDistance": 38.58504,
+              "weaponsAcquired": 1,
+              "winPlace": 17,
+              "winPoints": 1498,
+              "winPointsDelta": 0.590668857
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "7908b81c-323f-4aa6-b5dc-7240555d424e",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 42.1199951,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 56,
+              "killPoints": 1214,
+              "killPointsDelta": -7.846893,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "noneric-OLAF",
+              "playerId": "account.d622e31732c84a34a19d85fde12251bd",
+              "revives": 1,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 852,
+              "vehicleDestroys": 0,
+              "walkDistance": 1208.99255,
+              "weaponsAcquired": 6,
+              "winPlace": 15,
+              "winPoints": 1511,
+              "winPointsDelta": 1.3109163
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "61fcf682-3585-48f6-aedf-270fee9884c7",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 51.4800034,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 81,
+              "killPoints": 1000,
+              "killPointsDelta": -11.312438,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Survi_Jonin",
+              "playerId": "account.5314ac73843d41c2906008799917566a",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 174,
+              "vehicleDestroys": 0,
+              "walkDistance": 226.942963,
+              "weaponsAcquired": 2,
+              "winPlace": 25,
+              "winPoints": 1500,
+              "winPointsDelta": -8.779776
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "7e4983e1-321e-43ba-9f70-fdf63b9a2a79",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 100,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 44,
+              "killPoints": 1351,
+              "killPointsDelta": 0,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 5,
+              "mostDamage": 0,
+              "name": "SmaK",
+              "playerId": "account.4571da39735e491a8ee6bf639b91b449",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 81,
+              "vehicleDestroys": 0,
+              "walkDistance": 14.129734,
+              "weaponsAcquired": 1,
+              "winPlace": 29,
+              "winPoints": 1519,
+              "winPointsDelta": 0
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "6ef3852c-9f66-4343-935a-b7a1f7422e85",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 2,
+              "damageDealt": 170.828369,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 0,
+              "killPlace": 29,
+              "killPoints": 1230,
+              "killPointsDelta": 9.089266,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 76,
+              "mostDamage": 0,
+              "name": "Matthew_24",
+              "playerId": "account.80ad5520e0fe4259ac9cb0e7aac7be78",
+              "revives": 0,
+              "rideDistance": 5901.98633,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1124,
+              "vehicleDestroys": 0,
+              "walkDistance": 1269.16333,
+              "weaponsAcquired": 5,
+              "winPlace": 12,
+              "winPoints": 1484,
+              "winPointsDelta": 4.60206461
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "14b40128-40ce-49ce-a091-a793b8d05586",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 2,
+              "damageDealt": 23.59642,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 53,
+              "killPoints": 1166,
+              "killPointsDelta": -4.2046423,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Mr-Spikey",
+              "playerId": "account.9d9b4a9c2d89449bb7c131e241ebf347",
+              "revives": 0,
+              "rideDistance": 1923.98975,
+              "roadKills": 0,
+              "swimDistance": 13.0834627,
+              "teamKills": 0,
+              "timeSurvived": 1278,
+              "vehicleDestroys": 0,
+              "walkDistance": 1987.80566,
+              "weaponsAcquired": 5,
+              "winPlace": 11,
+              "winPoints": 1523,
+              "winPointsDelta": 4.09451628
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "8d2afa1d-16d7-499e-a4da-9bbdf7e2e62c",
+          "attributes": {
+            "stats": {
+              "rank": 17,
+              "teamId": 9
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "14c634d3-ec84-4a8f-af82-6086470372d1"
+                },
+                {
+                  "type": "participant",
+                  "id": "9bfa68db-5ec3-47e5-b09d-d9ee54775d33"
+                },
+                {
+                  "type": "participant",
+                  "id": "54949ddc-ed4c-47b8-afbb-7870ec44c388"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "47e4d4e5-fb29-4c62-a7ca-2543e3b35694",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 2,
+              "damageDealt": 290.615417,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 3,
+              "killPlace": 51,
+              "killPoints": 1000,
+              "killPointsDelta": 6.082765,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "allenombie",
+              "playerId": "account.1c3caf1c9fa64c9f89c665a0c51a4821",
+              "revives": 0,
+              "rideDistance": 1763.149,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1410,
+              "vehicleDestroys": 0,
+              "walkDistance": 1786.768,
+              "weaponsAcquired": 6,
+              "winPlace": 9,
+              "winPoints": 1500,
+              "winPointsDelta": 5.76741362
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "1a315bbd-56d1-4f49-90c7-f3322854ee98",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 0.16999875,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 5,
+              "killPlace": 52,
+              "killPoints": 964,
+              "killPointsDelta": 5.830701,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Snake-47th",
+              "playerId": "account.71e2b4809c7844bab42fecbf57cc9406",
+              "revives": 2,
+              "rideDistance": 170.299744,
+              "roadKills": 0,
+              "swimDistance": 13.7878,
+              "teamKills": 0,
+              "timeSurvived": 1283,
+              "vehicleDestroys": 0,
+              "walkDistance": 3655.56128,
+              "weaponsAcquired": 6,
+              "winPlace": 11,
+              "winPoints": 1480,
+              "winPointsDelta": 5.46164656
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "d5855552-2820-41d9-b4ec-1a5b2a714777",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 1,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 64,
+              "killPoints": 980,
+              "killPointsDelta": -0.0759822056,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "AntiPub",
+              "playerId": "account.ca88d3d3c3284261a1c4f27d2c91e143",
+              "revives": 0,
+              "rideDistance": 480.3044,
+              "roadKills": 0,
+              "swimDistance": 10.8032494,
+              "teamKills": 0,
+              "timeSurvived": 431,
+              "vehicleDestroys": 0,
+              "walkDistance": 1313.5498,
+              "weaponsAcquired": 3,
+              "winPlace": 19,
+              "winPoints": 1487,
+              "winPointsDelta": -0.9123101
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "a4e41dbe-ed50-4b25-a72e-8bb320802608",
+          "attributes": {
+            "stats": {
+              "rank": 28,
+              "teamId": 8
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "14f84101-1089-402a-a6fc-b4b5c7693303"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "2c36b2db-ea18-4162-8819-7a13e090860b",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 73.1,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 71,
+              "killPoints": 1032,
+              "killPointsDelta": -6.2049427,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "SashaDoshik",
+              "playerId": "account.6ab63a981ed4462c99d445875f403c90",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 197,
+              "vehicleDestroys": 0,
+              "walkDistance": 138.6516,
+              "weaponsAcquired": 4,
+              "winPlace": 22,
+              "winPoints": 1480,
+              "winPointsDelta": -3.82415986
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "97b6416d-38cc-40cf-a942-bab2f0afa142",
+          "attributes": {
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 20,
+              "teamId": 4
+            },
+            "won": "false"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "cb8e0c10-4939-40ce-9842-3e1b5c8a1d22"
+                },
+                {
+                  "type": "participant",
+                  "id": "f78dfdbd-ea0c-4de6-a529-931daf5e69cf"
+                },
+                {
+                  "type": "participant",
+                  "id": "2d1a26dc-60ef-4939-826d-b31262a8679e"
+                },
+                {
+                  "type": "participant",
+                  "id": "08deb491-b72c-4450-ac98-e8f19902ae05"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "dc6c4007-e449-4406-9da9-74ec57d20f22",
+          "attributes": {
+            "stats": {
+              "rank": 16,
+              "teamId": 24
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "58084dd1-9c1e-487d-ae60-b65faf8e5e73"
+                },
+                {
+                  "type": "participant",
+                  "id": "6d9e9ddd-92db-4d8d-b3b9-32250fca15d9"
+                },
+                {
+                  "type": "participant",
+                  "id": "55f350ab-64a6-4b13-a413-305e3ecbc47b"
+                },
+                {
+                  "type": "participant",
+                  "id": "8c166b46-e4f1-4a8f-ae55-150c006a98b0"
+                }
+              ]
+            },
+            "team": {
+              "data": null
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "61f26c9e-cc2e-4afa-ac2e-7199e779ca8c",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 1,
+              "boosts": 3,
+              "damageDealt": 169.659256,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 10,
+              "killPoints": 1160,
+              "killPointsDelta": 31.4245453,
+              "killStreaks": 1,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 529,
+              "mostDamage": 0,
+              "name": "MATT_RINGO",
+              "playerId": "account.3b09a571bf0e4c9d822249551ac87560",
+              "revives": 0,
+              "rideDistance": 2885.2356,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1780,
+              "vehicleDestroys": 0,
+              "walkDistance": 2248.19824,
+              "weaponsAcquired": 7,
+              "winPlace": 2,
+              "winPoints": 1534,
+              "winPointsDelta": 10.2967148
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "e0de8759-9907-4f3d-b9a8-794297924bb2",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 3,
+              "damageDealt": 200.483459,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 0,
+              "killPlace": 5,
+              "killPoints": 1092,
+              "killPointsDelta": 50.8537,
+              "killStreaks": 1,
+              "kills": 3,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 26,
+              "mostDamage": 0,
+              "name": "PetiKyun",
+              "playerId": "account.a3186833e3614a39b36d76527fc6a0a4",
+              "revives": 0,
+              "rideDistance": 2483.91162,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1654,
+              "vehicleDestroys": 0,
+              "walkDistance": 2291.44336,
+              "weaponsAcquired": 4,
+              "winPlace": 2,
+              "winPoints": 1506,
+              "winPointsDelta": 11.2048712
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "928d0ee5-c401-419a-8cac-4c99389bf66b",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 87,
+              "killPoints": 1143,
+              "killPointsDelta": -16.32585,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Mattias_R",
+              "playerId": "account.2fa7863a32fa4cb08b7bca84c2858d4b",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 435,
+              "vehicleDestroys": 0,
+              "walkDistance": 17.3465137,
+              "weaponsAcquired": 1,
+              "winPlace": 28,
+              "winPoints": 1537,
+              "winPointsDelta": -12.2825756
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "6d9e9ddd-92db-4d8d-b3b9-32250fca15d9",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 1,
+              "boosts": 0,
+              "damageDealt": 192.506332,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 58,
+              "killPoints": 1087,
+              "killPointsDelta": -2.43083262,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Mur4rNN",
+              "playerId": "account.3eeae3fcd8d344f1bcf76a17257bfcc4",
+              "revives": 0,
+              "rideDistance": 959.3178,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 513,
+              "vehicleDestroys": 0,
+              "walkDistance": 446.2107,
+              "weaponsAcquired": 3,
+              "winPlace": 16,
+              "winPoints": 1519,
+              "winPointsDelta": 0.115677521
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "8153b27e-92ba-4a1a-890f-dee4f6fb8da2",
+          "attributes": {
+            "stats": {
+              "rank": 3,
+              "teamId": 15
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "2bfc464a-6837-4eaa-8081-24d880a02890"
+                },
+                {
+                  "type": "participant",
+                  "id": "b2e92a43-62c9-453d-a1d4-b37d2197625a"
+                },
+                {
+                  "type": "participant",
+                  "id": "2266dbf3-3513-4af1-ae70-4480fa583930"
+                }
+              ]
+            },
+            "team": {
+              "data": null
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "3faad59a-8bc5-4987-86ef-008828838e8b",
+          "attributes": {
+            "stats": {
+              "rank": 24,
+              "teamId": 13
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "e754e92b-682b-4089-9115-4b9616346ba6"
+                },
+                {
+                  "type": "participant",
+                  "id": "ba083cd7-6054-48a2-92c3-a1e46582e3f3"
+                },
+                {
+                  "type": "participant",
+                  "id": "f6cb8e41-69f5-4199-80cd-3ef94aa5dd52"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "28997b03-5fff-4baf-9350-226afeb543af",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 3,
+              "boosts": 4,
+              "damageDealt": 298.236145,
+              "deathType": "alive",
+              "headshotKills": 1,
+              "heals": 9,
+              "killPlace": 9,
+              "killPoints": 1213,
+              "killPointsDelta": 26.96576,
+              "killStreaks": 1,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 150,
+              "mostDamage": 0,
+              "name": "Hummelor",
+              "playerId": "account.6d86baa4375b4805b6d15b48c102d592",
+              "revives": 3,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1781,
+              "vehicleDestroys": 0,
+              "walkDistance": 5237.477,
+              "weaponsAcquired": 6,
+              "winPlace": 1,
+              "winPoints": 1509,
+              "winPointsDelta": 11.94421
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "0891b456-92a8-4100-a144-7d6c57f61ef6",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 1,
+              "boosts": 4,
+              "damageDealt": 461.8937,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 21,
+              "killPoints": 1281,
+              "killPointsDelta": 12.2995424,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 259,
+              "mostDamage": 0,
+              "name": "twaruk",
+              "playerId": "account.d9bb7b78cd6f4d599c61d37476784e51",
+              "revives": 0,
+              "rideDistance": 2928.16113,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1762,
+              "vehicleDestroys": 1,
+              "walkDistance": 2421.622,
+              "weaponsAcquired": 7,
+              "winPlace": 2,
+              "winPoints": 1569,
+              "winPointsDelta": 9.171002
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "cb8e0c10-4939-40ce-9842-3e1b5c8a1d22",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 69,
+              "killPoints": 1137,
+              "killPointsDelta": -9.58778,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "ElfUndDreissig",
+              "playerId": "account.0bd619e04f544109a766ae75408a50d4",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 208,
+              "vehicleDestroys": 0,
+              "walkDistance": 159.221039,
+              "weaponsAcquired": 2,
+              "winPlace": 20,
+              "winPoints": 1449,
+              "winPointsDelta": -1.4510349
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "121448ed-a3f3-4b7c-b9f2-5cb2724ad72d",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 77,
+              "killPoints": 1046,
+              "killPointsDelta": -9.079851,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Openair",
+              "playerId": "account.7473dd8e441d4751908e2973da39df82",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1141,
+              "vehicleDestroys": 0,
+              "walkDistance": 71.01232,
+              "weaponsAcquired": 2,
+              "winPlace": 24,
+              "winPoints": 1459,
+              "winPointsDelta": -6.108341
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "657a9da2-7988-47ce-b39d-eff25e67aa8a",
+          "attributes": {
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 92,
+              "killPoints": 1214,
+              "killPointsDelta": -20.5695133,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Khes93",
+              "playerId": "account.13a67d3ee7494d73b9003981ca25a363",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 157,
+              "vehicleDestroys": 0,
+              "walkDistance": 0,
+              "weaponsAcquired": 0,
+              "winPlace": 29,
+              "winPoints": 1530,
+              "winPointsDelta": -13.16984
+            },
+            "actor": ""
+          }
+        },
+        {
+          "type": "roster",
+          "id": "509e6680-e2a3-46c8-ba4e-e6d4a86aa6a4",
+          "attributes": {
+            "stats": {
+              "rank": 1,
+              "teamId": 10
+            },
+            "won": "true",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "28997b03-5fff-4baf-9350-226afeb543af"
+                },
+                {
+                  "type": "participant",
+                  "id": "64d3ee50-11d2-48de-83cd-7099a4c012e1"
+                },
+                {
+                  "type": "participant",
+                  "id": "e66ef083-960e-47bd-9503-28e1d3515eb5"
+                },
+                {
+                  "type": "participant",
+                  "id": "c7fc46e4-7878-4360-8dc2-f1d13ba297c7"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "f78dfdbd-ea0c-4de6-a529-931daf5e69cf",
+          "attributes": {
+            "stats": {
+              "DBNOs": 4,
+              "assists": 0,
+              "boosts": 2,
+              "damageDealt": 580.021,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 2,
+              "killPlace": 6,
+              "killPoints": 1358,
+              "killPointsDelta": 27.8663139,
+              "killStreaks": 2,
+              "kills": 3,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 13,
+              "mostDamage": 0,
+              "name": "Atlas1337",
+              "playerId": "account.cbef9d0e53c54abdb2ef4a6701a0d250",
+              "revives": 0,
+              "rideDistance": 1469.53162,
+              "roadKills": 0,
+              "swimDistance": 4.59613657,
+              "teamKills": 0,
+              "timeSurvived": 1597,
+              "vehicleDestroys": 0,
+              "walkDistance": 2609.57739,
+              "weaponsAcquired": 7,
+              "winPlace": 5,
+              "winPoints": 1536,
+              "winPointsDelta": 8.488868
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "b5163a7b-db44-4457-96dd-41eb00bc895b",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0.547414958,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 48,
+              "killPoints": 1246,
+              "killPointsDelta": -3.34782362,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "vez1L",
+              "playerId": "account.1e90a303384845d4b6c4c882269fdf84",
+              "revives": 0,
+              "rideDistance": 3641.73877,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1127,
+              "vehicleDestroys": 0,
+              "walkDistance": 1049.24683,
+              "weaponsAcquired": 6,
+              "winPlace": 7,
+              "winPoints": 1506,
+              "winPointsDelta": 8.283733
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "5228cad0-5b17-4358-be4f-c140cc5e62d7",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 82,
+              "killPoints": 1000,
+              "killPointsDelta": -10.5231647,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "plomienx",
+              "playerId": "account.7d2c11b2f2a14a35bb2b7a55ba1f8c8c",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 172,
+              "vehicleDestroys": 0,
+              "walkDistance": 144.712952,
+              "weaponsAcquired": 2,
+              "winPlace": 25,
+              "winPoints": 1500,
+              "winPointsDelta": -8.779776
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "6d78d71e-cf13-4e02-b884-2671d90f6bc3",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 97.52,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 90,
+              "killPoints": 1378,
+              "killPointsDelta": -25.1378365,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "REDOX29CM",
+              "playerId": "account.4e2a6084ba0f4f78864b8438bf8c51e2",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 107,
+              "vehicleDestroys": 0,
+              "walkDistance": 50.60872,
+              "weaponsAcquired": 2,
+              "winPlace": 28,
+              "winPoints": 1483,
+              "winPointsDelta": -10.4915428
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "cb7ec37a-464d-493c-9e27-4e363d0c51e4",
+          "attributes": {
+            "stats": {
+              "rank": 9,
+              "teamId": 11
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "60586372-26a3-40c0-98e2-1bea294e1020"
+                },
+                {
+                  "type": "participant",
+                  "id": "dbf6cf3f-3272-4956-b268-4822ac126f71"
+                },
+                {
+                  "type": "participant",
+                  "id": "e1b339d8-05d1-493e-a764-4ed91d8f885b"
+                },
+                {
+                  "type": "participant",
+                  "id": "47e4d4e5-fb29-4c62-a7ca-2543e3b35694"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "0dc15749-4d69-42be-aee2-358a5d74663f",
+          "attributes": {
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 25,
+              "teamId": 17
+            },
+            "won": "false"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "5228cad0-5b17-4358-be4f-c140cc5e62d7"
+                },
+                {
+                  "type": "participant",
+                  "id": "14782fcb-303e-47f2-aff7-ed8cbcab0bfc"
+                },
+                {
+                  "type": "participant",
+                  "id": "61fcf682-3585-48f6-aedf-270fee9884c7"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "b9670ebc-8ed6-4b17-b194-cbfcda484de5",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 2,
+              "damageDealt": 170.077881,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 7,
+              "killPlace": 14,
+              "killPoints": 1124,
+              "killPointsDelta": 27.4416313,
+              "killStreaks": 2,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 144,
+              "mostDamage": 0,
+              "name": "FenyxYoann",
+              "playerId": "account.cfa1f0e452af433fbab30ac6c06de9de",
+              "revives": 0,
+              "rideDistance": 1682.54675,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1449,
+              "vehicleDestroys": 0,
+              "walkDistance": 2620.781,
+              "weaponsAcquired": 6,
+              "winPlace": 8,
+              "winPoints": 1529,
+              "winPointsDelta": 5.68198156
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "5c9a6e0b-4def-46f5-99f6-3c7080cd450c",
+          "attributes": {
+            "stats": {
+              "rank": 22,
+              "teamId": 18
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "2c36b2db-ea18-4162-8819-7a13e090860b"
+                },
+                {
+                  "type": "participant",
+                  "id": "a2294103-adc7-46c2-92bc-ba6c569b02e5"
+                },
+                {
+                  "type": "participant",
+                  "id": "875b9003-8a4a-4115-ac1a-e62a3d4b1938"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "roster",
+          "id": "e82be562-f5ad-4008-b00d-46b7899bb6cd",
+          "attributes": {
+            "won": "false",
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 24,
+              "teamId": 27
+            }
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "04433367-1619-43d0-b4d0-b1c5b54c893e"
+                },
+                {
+                  "type": "participant",
+                  "id": "dd95a2a4-044d-46eb-9211-22536d5da6cc"
+                },
+                {
+                  "type": "participant",
+                  "id": "b804ff27-7a46-45bd-9c62-29a4672fd414"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "04433367-1619-43d0-b4d0-b1c5b54c893e",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 68.94,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 80,
+              "killPoints": 1000,
+              "killPointsDelta": -8.542767,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "AbsoluteJaffa",
+              "playerId": "account.aac7199895bd4d1ab2aad0e5656ecec7",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 117,
+              "vehicleDestroys": 0,
+              "walkDistance": 29.6163044,
+              "weaponsAcquired": 0,
+              "winPlace": 24,
+              "winPoints": 1495,
+              "winPointsDelta": -7.348617
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "dd95a2a4-044d-46eb-9211-22536d5da6cc",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 79,
+              "killPoints": 1000,
+              "killPointsDelta": -8.1720295,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "camorten",
+              "playerId": "account.04255a05a34e4507a55f10afa0111036",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 154,
+              "vehicleDestroys": 0,
+              "walkDistance": 171.638168,
+              "weaponsAcquired": 2,
+              "winPlace": 24,
+              "winPoints": 1495,
+              "winPointsDelta": -7.348617
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "0cbd1868-5add-42d3-9361-df1d814af450",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 63,
+              "killPoints": 980,
+              "killPointsDelta": 0.4168771,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "SadbutTrueS",
+              "playerId": "account.611eb535e87e4d39a43edc08fc617c93",
+              "revives": 0,
+              "rideDistance": 522.523,
+              "roadKills": 0,
+              "swimDistance": 312.4807,
+              "teamKills": 0,
+              "timeSurvived": 1159,
+              "vehicleDestroys": 0,
+              "walkDistance": 290.317,
+              "weaponsAcquired": 0,
+              "winPlace": 19,
+              "winPoints": 1487,
+              "winPointsDelta": -0.892280757
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "e66ef083-960e-47bd-9503-28e1d3515eb5",
+          "attributes": {
+            "stats": {
+              "DBNOs": 4,
+              "assists": 2,
+              "boosts": 4,
+              "damageDealt": 522.099731,
+              "deathType": "alive",
+              "headshotKills": 2,
+              "heals": 2,
+              "killPlace": 1,
+              "killPoints": 1247,
+              "killPointsDelta": 97.85837,
+              "killStreaks": 3,
+              "kills": 5,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 70,
+              "mostDamage": 0,
+              "name": "goodolrory",
+              "playerId": "account.de7420649ec64c5495f061e39681571d",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1781,
+              "vehicleDestroys": 0,
+              "walkDistance": 5089.063,
+              "weaponsAcquired": 5,
+              "winPlace": 1,
+              "winPoints": 1504,
+              "winPointsDelta": 12.1197786
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "e71f8b7c-a6f4-497e-85a2-044ef8aa0cf8",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 100,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 35,
+              "killPoints": 1079,
+              "killPointsDelta": 11.3931427,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 8,
+              "mostDamage": 0,
+              "name": "DrEisenfaustX",
+              "playerId": "account.717181a3e5444518af67d32d8a0e07f3",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 326,
+              "vehicleDestroys": 0,
+              "walkDistance": 377.6017,
+              "weaponsAcquired": 4,
+              "winPlace": 19,
+              "winPoints": 1478,
+              "winPointsDelta": -0.147452354
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "2266dbf3-3513-4af1-ae70-4480fa583930",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 100,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 5,
+              "killPlace": 22,
+              "killPoints": 1133,
+              "killPointsDelta": 20.75546,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "HealthyDude",
+              "playerId": "account.5d8246cd455d482398b8a5df6265d437",
+              "revives": 0,
+              "rideDistance": 1670.69189,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1722,
+              "vehicleDestroys": 0,
+              "walkDistance": 2268.0354,
+              "weaponsAcquired": 9,
+              "winPlace": 3,
+              "winPoints": 1595,
+              "winPointsDelta": 7.510822
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "5d0f6c2f-8938-49ef-bfa9-99532759d500",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 82.1300049,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 89,
+              "killPoints": 1585,
+              "killPointsDelta": -30.7349949,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "MSSH",
+              "playerId": "account.5350fb58031e49bba656561a2ae64dbb",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 119,
+              "vehicleDestroys": 0,
+              "walkDistance": 29.4113483,
+              "weaponsAcquired": 2,
+              "winPlace": 28,
+              "winPoints": 1651,
+              "winPointsDelta": -15.6711664
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "42d9bc92-00f6-4811-9060-5338c8d21ace",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 83,
+              "killPoints": 1057,
+              "killPointsDelta": -11.61421,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "NE_IGOR",
+              "playerId": "account.10b6f271bd324ca7a63963c5d7bf928a",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 158,
+              "vehicleDestroys": 0,
+              "walkDistance": 0,
+              "weaponsAcquired": 0,
+              "winPlace": 25,
+              "winPoints": 1483,
+              "winPointsDelta": -8.130841
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "asset",
+          "id": "b6239140-725b-11e8-8d16-0a586466990a",
+          "attributes": {
+            "name": "telemetry",
+            "description": "",
+            "createdAt": "2018-06-17T18:24:45Z",
+            "URL": "https://telemetry-cdn.playbattlegrounds.com/bluehole-pubg/pc-eu/2018/06/17/18/24/b6239140-725b-11e8-8d16-0a586466990a-telemetry.json"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "c3fdc5c7-3212-426a-aa62-943e48479711",
+          "attributes": {
+            "stats": {
+              "DBNOs": 5,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 549.4114,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 3,
+              "killPlace": 7,
+              "killPoints": 1179,
+              "killPointsDelta": 37.18023,
+              "killStreaks": 1,
+              "kills": 3,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 169,
+              "mostDamage": 0,
+              "name": "The_Huntsman",
+              "playerId": "account.a7ad7db2d51548d0847df70c6fff19b1",
+              "revives": 0,
+              "rideDistance": 3069.755,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1490,
+              "vehicleDestroys": 0,
+              "walkDistance": 1739.02954,
+              "weaponsAcquired": 6,
+              "winPlace": 7,
+              "winPoints": 1523,
+              "winPointsDelta": 7.817947
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "f8618986-b5e2-4945-aa30-3dd308aa4818",
+          "attributes": {
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 184.508881,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 1,
+              "killPlace": 32,
+              "killPoints": 1284,
+              "killPointsDelta": 2.732294,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 3,
+              "mostDamage": 0,
+              "name": "Sonderposten",
+              "playerId": "account.a7cd83f45ac14ce69f40732e7ae6c211",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 852,
+              "vehicleDestroys": 0,
+              "walkDistance": 916.7311,
+              "weaponsAcquired": 4,
+              "winPlace": 15,
+              "winPoints": 1545,
+              "winPointsDelta": 0.157794118
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "39b8ab03-403f-4d0d-bf08-1373ceca0425",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 76,
+              "killPoints": 1093,
+              "killPointsDelta": -11.4406939,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "dalaadno",
+              "playerId": "account.49d5a7ebcfbd41f6a51112abbd46f070",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 1141,
+              "vehicleDestroys": 0,
+              "walkDistance": 56.9098129,
+              "weaponsAcquired": 5,
+              "winPlace": 24,
+              "winPoints": 1497,
+              "winPointsDelta": -7.33705759
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "e754e92b-682b-4089-9115-4b9616346ba6",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 143,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 0,
+              "killPlace": 41,
+              "killPoints": 1012,
+              "killPointsDelta": 12.1928682,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 2,
+              "mostDamage": 0,
+              "name": "xXx_alitiz_xXx",
+              "playerId": "account.f3ba50d64ca54428ad58123b8fbbc630",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 168,
+              "vehicleDestroys": 0,
+              "walkDistance": 43.84668,
+              "weaponsAcquired": 3,
+              "winPlace": 24,
+              "winPoints": 1488,
+              "winPointsDelta": -7.10585
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "cdaa5600-533a-4f5d-b304-96526bde979c",
+          "attributes": {
+            "stats": {
+              "rank": 29,
+              "teamId": 21
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "cc924273-04d8-458c-bf42-23c0c82b7f0d"
+                },
+                {
+                  "type": "participant",
+                  "id": "657a9da2-7988-47ce-b39d-eff25e67aa8a"
+                },
+                {
+                  "type": "participant",
+                  "id": "4da0358a-5d6c-45b6-a26f-a4b9ea989332"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "a5d60133-cefb-491f-aa9b-d16d7c8c23ab",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0.16999875,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 54,
+              "killPoints": 1026,
+              "killPointsDelta": 2.81439233,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Skratt",
+              "playerId": "account.6ce075b7b6f24ef6856618f197a3a5f7",
+              "revives": 0,
+              "rideDistance": 171.124924,
+              "roadKills": 0,
+              "swimDistance": 14.7182655,
+              "teamKills": 0,
+              "timeSurvived": 1254,
+              "vehicleDestroys": 0,
+              "walkDistance": 3755.38867,
+              "weaponsAcquired": 4,
+              "winPlace": 11,
+              "winPoints": 1483,
+              "winPointsDelta": 5.36485529
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "a2294103-adc7-46c2-92bc-ba6c569b02e5",
+          "attributes": {
+            "actor": "",
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 2,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 253.9,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 5,
+              "killPlace": 19,
+              "killPoints": 1000,
+              "killPointsDelta": 31.0503483,
+              "killStreaks": 1,
+              "kills": 2,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 15,
+              "mostDamage": 0,
+              "name": "LOR4N",
+              "playerId": "account.b70200482be748c9a8d469945c72f0d7",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 216,
+              "vehicleDestroys": 0,
+              "walkDistance": 113.113068,
+              "weaponsAcquired": 2,
+              "winPlace": 22,
+              "winPoints": 1500,
+              "winPointsDelta": -4.471662
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "b804ff27-7a46-45bd-9c62-29a4672fd414",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 73.63,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 0,
+              "killPlace": 40,
+              "killPoints": 997,
+              "killPointsDelta": 13.7338476,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 2,
+              "mostDamage": 0,
+              "name": "Skarbrand",
+              "playerId": "account.f7d43bef96ac45d28f78b9afa405f8e1",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 181,
+              "vehicleDestroys": 0,
+              "walkDistance": 123.273949,
+              "weaponsAcquired": 3,
+              "winPlace": 24,
+              "winPoints": 1494,
+              "winPointsDelta": -7.313071
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "976b4c3c-530f-4c91-b54f-e762b3652ace",
+          "attributes": {
+            "won": "false",
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 24,
+              "teamId": 3
+            }
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "39b8ab03-403f-4d0d-bf08-1373ceca0425"
+                },
+                {
+                  "type": "participant",
+                  "id": "42d9bc92-00f6-4811-9060-5338c8d21ace"
+                },
+                {
+                  "type": "participant",
+                  "id": "121448ed-a3f3-4b7c-b9f2-5cb2724ad72d"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "a2d2092d-6712-4dc4-91af-cf91e3b10cb3",
+          "attributes": {
+            "stats": {
+              "DBNOs": 1,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 100,
+              "deathType": "byplayer",
+              "headshotKills": 1,
+              "heals": 0,
+              "killPlace": 39,
+              "killPoints": 1373,
+              "killPointsDelta": -6.57325125,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 2,
+              "mostDamage": 0,
+              "name": "ShixieBae",
+              "playerId": "account.b43be4a5c810484db8afa610488de90c",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 187,
+              "vehicleDestroys": 0,
+              "walkDistance": 183.9112,
+              "weaponsAcquired": 2,
+              "winPlace": 23,
+              "winPoints": 1540,
+              "winPointsDelta": -7.127642
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "4da0358a-5d6c-45b6-a26f-a4b9ea989332",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 93,
+              "killPoints": 1275,
+              "killPointsDelta": -23.32617,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "FEARH",
+              "playerId": "account.b244832a29cc4942b492edc308af7cee",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 157,
+              "vehicleDestroys": 0,
+              "walkDistance": 0,
+              "weaponsAcquired": 0,
+              "winPlace": 29,
+              "winPoints": 1608,
+              "winPointsDelta": -15.6052675
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "55f350ab-64a6-4b13-a413-305e3ecbc47b",
+          "attributes": {
+            "shardId": "pc-eu",
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 1,
+              "damageDealt": 0.750447452,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 4,
+              "killPlace": 59,
+              "killPoints": 1229,
+              "killPointsDelta": -10.0386868,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Ebolaninja",
+              "playerId": "account.292a3e49b62048a195ed8bd52cc236f4",
+              "revives": 0,
+              "rideDistance": 887.728149,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 500,
+              "vehicleDestroys": 0,
+              "walkDistance": 597.098267,
+              "weaponsAcquired": 3,
+              "winPlace": 16,
+              "winPoints": 1511,
+              "winPointsDelta": 0.3651742
+            },
+            "actor": ""
+          }
+        },
+        {
+          "type": "roster",
+          "id": "6b073b97-c110-46e3-b1e0-99afca7e5f98",
+          "attributes": {
+            "won": "false",
+            "shardId": "pc-eu",
+            "stats": {
+              "rank": 14,
+              "teamId": 26
+            }
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "58eb9822-78c2-44d3-9136-4ca3d7988367"
+                },
+                {
+                  "type": "participant",
+                  "id": "a4c6c2da-b6f2-4ff7-bc46-c20bf52bbc51"
+                },
+                {
+                  "type": "participant",
+                  "id": "52652086-2af1-4d13-8275-926c0d3719e3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "participant",
+          "id": "cb35b74e-1bee-40c0-b914-9abae0444a1a",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 0,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 57,
+              "killPoints": 1000,
+              "killPointsDelta": 2.43359947,
+              "killStreaks": 0,
+              "kills": 0,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 0,
+              "mostDamage": 0,
+              "name": "Nicorobin",
+              "playerId": "account.211238d08b68405bbf06fe328e5b838a",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 815,
+              "vehicleDestroys": 0,
+              "walkDistance": 1089.70166,
+              "weaponsAcquired": 4,
+              "winPlace": 15,
+              "winPoints": 1500,
+              "winPointsDelta": 1.69947374
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "participant",
+          "id": "f6cb8e41-69f5-4199-80cd-3ef94aa5dd52",
+          "attributes": {
+            "stats": {
+              "DBNOs": 0,
+              "assists": 0,
+              "boosts": 0,
+              "damageDealt": 57,
+              "deathType": "byplayer",
+              "headshotKills": 0,
+              "heals": 0,
+              "killPlace": 37,
+              "killPoints": 1043,
+              "killPointsDelta": 13.4047718,
+              "killStreaks": 1,
+              "kills": 1,
+              "lastKillPoints": 0,
+              "lastWinPoints": 0,
+              "longestKill": 5,
+              "mostDamage": 0,
+              "name": "SenorVoulga",
+              "playerId": "account.0cb08df05c774df7b37312fa1a85b264",
+              "revives": 0,
+              "rideDistance": 0,
+              "roadKills": 0,
+              "swimDistance": 0,
+              "teamKills": 0,
+              "timeSurvived": 220,
+              "vehicleDestroys": 0,
+              "walkDistance": 270.094727,
+              "weaponsAcquired": 3,
+              "winPlace": 21,
+              "winPoints": 1395,
+              "winPointsDelta": -0.3790617
+            },
+            "actor": "",
+            "shardId": "pc-eu"
+          }
+        },
+        {
+          "type": "roster",
+          "id": "6db97497-eb24-4c34-b36b-73f46497a859",
+          "attributes": {
+            "stats": {
+              "rank": 19,
+              "teamId": 2
+            },
+            "won": "false",
+            "shardId": "pc-eu"
+          },
+          "relationships": {
+            "team": {
+              "data": null
+            },
+            "participants": {
+              "data": [
+                {
+                  "type": "participant",
+                  "id": "c4087b4f-56fc-484e-a03f-4f48826b3682"
+                },
+                {
+                  "type": "participant",
+                  "id": "e71f8b7c-a6f4-497e-85a2-044ef8aa0cf8"
+                },
+                {
+                  "type": "participant",
+                  "id": "5af9a9ef-e613-459e-86d6-2850276f0487"
+                },
+                {
+                  "type": "participant",
+                  "id": "8cf29ab1-8b82-484d-8a42-b4802775cb9a"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "links": {
+        "self": "https://api-origin.playbattlegrounds.com/shards/pc-na/matches/82465e28-cae8-4424-8e76-ab50e75e87ba"
+      },
+      "meta": {}
+    },
+    {
+      "content-type": "application/vnd.api+json",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "date": "Sat, 23 Jun 2018 16:43:22 GMT",
+      "cache-control": "max-age=604800",
+      "x-request-id": "47941c50-f85a-4004-bc8b-2814b9156595",
+      "age": "2062",
+      "x-cache": "Hit from cloudfront",
+      "via": "1.1 8cf3b0c0dbbd56e2b65caa29e0eea872.cloudfront.net (CloudFront)",
+      "x-amz-cf-id": "ru2P9JDeHMJbt3PR_xmZ9SIsysOQVx7SNP8j6bSyo_fkGhxVgUuEFw=="
+    }
+  ]
+}
