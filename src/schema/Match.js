@@ -54,7 +54,14 @@ export default `
         players: [MatchPlayer!]!
     }
 
+    type SampleMatch {
+        id: String!
+        playerName: String!
+        shardId: String!
+    }
+
     type Query {
         match(id: String!): Match!
+        sampleMatch(shardId: String!): SampleMatch!
     }
 `

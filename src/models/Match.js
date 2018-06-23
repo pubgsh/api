@@ -110,6 +110,17 @@ const Match = {
             await Promise.mapSeries(pubgMatches, m => writeMatch(m, tquery))
         })
     },
+
+    async getSample(shardId) {
+        return query.one(sql`
+            SELECT m.id AS "id", mp.player_name AS "playerName", m.shard_id AS "shardId"
+            FROM match_players mp
+            JOIN matches m ON mp.match_id = m.id
+            WHERE m.shard_id = ${shardId}
+            ORDER BY m.played_at DESC
+            LIMIT 1
+        `, { debug: true })
+    },
 }
 
 export default Match

@@ -18,6 +18,10 @@ export default {
 
             return match
         },
+
+        async sampleMatch(parent, { shardId }, { models }) {
+            return models.Match.getSample(shardId)
+        },
     },
 }
 
