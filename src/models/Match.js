@@ -119,7 +119,7 @@ const Match = {
             WHERE m.shard_id = ${shardId}
             ORDER BY m.played_at DESC
             LIMIT 1
-        `, { debug: true })
+        `, { debug })
     },
 }
 
