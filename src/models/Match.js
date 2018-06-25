@@ -117,6 +117,7 @@ const Match = {
             FROM match_players mp
             JOIN matches m ON mp.match_id = m.id
             WHERE m.shard_id = ${shardId}
+            AND played_at IS NOT NULL
             ORDER BY m.played_at DESC
             LIMIT 1
         `, { debug })
