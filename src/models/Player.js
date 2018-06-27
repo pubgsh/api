@@ -20,6 +20,17 @@ const Player = {
         })
     },
 
+    async getId(name) {
+        return query.one(sql`
+            SELECT DISTINCT(player_id) AS id
+            FROM match_players
+            WHERE player_name = ${name}
+        `, {
+            rowMapper: row => row.id,
+            debug,
+        })
+    },
+
     async createOrUpdate(pubgPlayer) {
         const { name, shardId } = pubgPlayer.attributes
 

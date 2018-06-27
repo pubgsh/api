@@ -72,5 +72,9 @@ export default {
 
             return player
         },
+
+        async playerId(parent, { name }, { models }) {
+            return models.Player.getId(name)
+        },
     },
 }

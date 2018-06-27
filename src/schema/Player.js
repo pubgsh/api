@@ -18,5 +18,6 @@ export default `
 
     type Query {
         player(shardId: String!, name: String!): Player
+        playerId(name: String!): String
     }
 `
