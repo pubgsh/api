@@ -38,3 +38,5 @@ CREATE TABLE public.player_shards (
     last_fetched_at timestamp NULL,
     PRIMARY KEY (player_id, shard_id)
 );
+
+CREATE INDEX concurrently match_players_player_name ON match_players (player_name);
