@@ -1,10 +1,10 @@
 import Promise from 'bluebird'
 import moment from 'moment'
 import { isEmpty } from 'lodash'
+import TemporarySet from '@/lib/TemporarySet.js'
 import { playerFetchQueue } from '@/rate-limit-queue.js'
 
-// TODO: This needs to expire players after some time so that they can be searched for again.
-export const knownBadPlayers = new Set()
+export const knownBadPlayers = new TemporarySet(3 * 60 * 1000)
 
 export function shouldFetch(player, playerKey) {
     return !knownBadPlayers.has(playerKey) && (
