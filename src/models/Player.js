@@ -22,9 +22,13 @@ const Player = {
 
     async getId(name) {
         return query.one(sql`
-            SELECT DISTINCT(player_id) AS id
-            FROM match_players
+            SELECT player_id AS id
+            FROM match_players mp
+            JOIN matches m ON mp.match_id = m.id
             WHERE player_name = ${name}
+            AND m.played_at IS NOT NULL
+            ORDER BY m.played_at DESC
+            LIMIT 1
         `, {
             rowMapper: row => row.id,
             debug,
