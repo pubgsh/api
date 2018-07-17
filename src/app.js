@@ -76,6 +76,11 @@ async function logTimingMetrics() {
     console.log()
 }
 
+async function deleteOldMatches() {
+    // Note that this will cascade deletes through to match_players
+    await query(sql`DELETE FROM matches WHERE played_at < (TIMEZONE('utc', NOW()) - INTERVAL '14 DAY')`)
+}
+
 async function init() {
     const pgConfig = {
         user: process.env.PGUSER,
@@ -107,6 +112,7 @@ async function init() {
     io = socketio(server.listener)
     console.log(`Server running at: ${server.info.uri}`)
 
+    setInterval(deleteOldMatches, 10 * 60 * 1000)
     setInterval(logTimingMetrics, 60 * 1000)
 }
 
