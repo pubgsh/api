@@ -68,6 +68,14 @@ async function recreateDb() {  // eslint-disable-line
     console.log('Recreated DB')
 }
 
+async function logTimingMetrics() {
+    const pool = await getPool('default')
+    console.log()
+    console.log(JSON.stringify(pool.metrics, null, 2))
+    console.log(JSON.stringify(PubgApi.metrics, null, 2))
+    console.log()
+}
+
 async function init() {
     const pgConfig = {
         user: process.env.PGUSER,
@@ -99,13 +107,7 @@ async function init() {
     io = socketio(server.listener)
     console.log(`Server running at: ${server.info.uri}`)
 
-    setInterval(async () => {
-        const pool = await getPool('default')
-        console.log()
-        console.log(JSON.stringify(pool.metrics, null, 2))
-        console.log(JSON.stringify(PubgApi.metrics, null, 2))
-        console.log()
-    }, 60 * 1000)
+    setInterval(logTimingMetrics, 60 * 1000)
 }
 
 process.on('SIGINT', () => {
