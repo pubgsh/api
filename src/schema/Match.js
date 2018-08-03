@@ -7,6 +7,7 @@ export const MatchFields = `
     durationSeconds: Int
     telemetryUrl: String
     teamSize: Int
+    isCustomMatch: String
 `
 
 export default `

@@ -20,7 +20,8 @@ CREATE TABLE public.matches (
     duration_seconds integer NULL,
     telemetry_url varchar(255) NULL,
     created_at timestamp NOT NULL DEFAULT timezone('utc', now()),
-    updated_at timestamp NULL
+    updated_at timestamp NULL,
+    custom_match varchar(255)
 );
 
 CREATE TABLE public.match_players (

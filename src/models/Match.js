@@ -23,7 +23,8 @@ function getMaxSquadSize(pubgMatch) {
 
 const matchFields = sql.raw(`
     id, game_mode AS "gameMode", played_at AS "playedAt", map_name AS "mapName", team_size AS "teamSize",
-    duration_seconds AS "durationSeconds", telemetry_url AS "telemetryUrl", shard_id AS "shardId"
+    duration_seconds AS "durationSeconds", telemetry_url AS "telemetryUrl", shard_id AS "shardId", 
+    custom_match AS "isCustomMatch"
 `)
 
 const writeMatch = async (pubgMatch, tquery) => {
@@ -58,7 +59,7 @@ const writeMatch = async (pubgMatch, tquery) => {
         SET game_mode = ${attributes.gameMode}, played_at = ${attributes.createdAt},
             map_name = ${attributes.mapName}, duration_seconds = ${attributes.duration},
             team_size = ${getMaxSquadSize(pubgMatch)}, telemetry_url = ${getTelemetryUrl(pubgMatch)},
-            updated_at = timezone('utc', now())
+            updated_at = timezone('utc', now()), custom_match = ${attributes.isCustomMatch}
         WHERE id = ${pubgMatch.data.id}
     `, { debug })
 
