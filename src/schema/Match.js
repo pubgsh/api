@@ -6,7 +6,6 @@ export const MatchFields = `
     mapName: String
     durationSeconds: Int
     telemetryUrl: String
-    teamSize: Int
 `
 
 export default `

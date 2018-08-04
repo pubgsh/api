@@ -9,20 +9,8 @@ function getTelemetryUrl(pubgMatch) {
     return asset.attributes.URL
 }
 
-function getMaxSquadSize(pubgMatch) {
-    if (pubgMatch.data.attributes.gameMode.includes('solo')) return 1
-    if (pubgMatch.data.attributes.gameMode.includes('duo')) return 2
-    if (pubgMatch.data.attributes.gameMode.includes('squad')) return 4
-
-    const rosterParticipants = pubgMatch.included
-        .filter(i => i.type === 'roster')
-        .map(i => i.relationships.participants.data)
-
-    return rosterParticipants.reduce((acc, participants) => Math.max(acc, participants.length), 0)
-}
-
 const matchFields = sql.raw(`
-    id, game_mode AS "gameMode", played_at AS "playedAt", map_name AS "mapName", team_size AS "teamSize",
+    id, game_mode AS "gameMode", played_at AS "playedAt", map_name AS "mapName",
     duration_seconds AS "durationSeconds", telemetry_url AS "telemetryUrl", shard_id AS "shardId"
 `)
 
@@ -57,8 +45,7 @@ const writeMatch = async (pubgMatch, tquery) => {
         UPDATE matches
         SET game_mode = ${attributes.gameMode}, played_at = ${attributes.createdAt},
             map_name = ${attributes.mapName}, duration_seconds = ${attributes.duration},
-            team_size = ${getMaxSquadSize(pubgMatch)}, telemetry_url = ${getTelemetryUrl(pubgMatch)},
-            updated_at = timezone('utc', now())
+            telemetry_url = ${getTelemetryUrl(pubgMatch)}, updated_at = timezone('utc', now())
         WHERE id = ${pubgMatch.data.id}
     `, { debug })
 
