@@ -102,7 +102,7 @@ async function init() {
     console.log(`PG connected to [${process.env.PGHOST} : ${process.env.PGDATABASE}]`)
 
     if (process.env.NODE_ENV !== 'production') {
-        // await recreateDb()
+        await recreateDb()
     }
 
     await registerGraphql()
@@ -113,7 +113,7 @@ async function init() {
     console.log(`Server running at: ${server.info.uri}`)
 
     setInterval(deleteOldMatches, 10 * 60 * 1000)
-    setInterval(logTimingMetrics, 60 * 1000)
+    setInterval(logTimingMetrics, 6 * 60 * 60 * 1000)
 }
 
 process.on('SIGINT', () => {

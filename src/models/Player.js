@@ -9,28 +9,11 @@ const Player = {
         return query.one(sql`
             SELECT id, name, last_fetched_at AS "lastFetchedAt"
             FROM players p
-            LEFT JOIN player_shards ps ON p.id = ps.player_id
-                AND ps.shard_id = ${shardId}
-            WHERE 1 = 1
+            WHERE shard_id = ${shardId}
                 ${sql.if('AND id = ?', id)}
                 ${sql.if('AND name = ?', name)}
         `, {
             rowMapper: row => ({ ...row, shardId }),
-            debug,
-        })
-    },
-
-    async getId(name) {
-        return query.one(sql`
-            SELECT player_id AS id
-            FROM match_players mp
-            JOIN matches m ON mp.match_id = m.id
-            WHERE player_name = ${name}
-            AND m.played_at IS NOT NULL
-            ORDER BY m.played_at DESC
-            LIMIT 1
-        `, {
-            rowMapper: row => row.id,
             debug,
         })
     },
@@ -52,10 +35,10 @@ const Player = {
         const matchPlayers = matches.map(m => [m[0], player.id, player.name])
 
         await query(sql`
-            INSERT INTO players (id, name)
-            VALUES (${player.id}, ${player.name})
-            ON CONFLICT (id) DO UPDATE
-                SET name = EXCLUDED.name, updated_at = TIMEZONE('utc', NOW())
+            INSERT INTO players (id, shard_id, name, last_fetched_at)
+            VALUES (${player.id}, ${shardId}, ${player.name}, TIMEZONE('utc', NOW()))
+            ON CONFLICT (id, shard_id) DO UPDATE
+                SET last_fetched_at = TIMEZONE('utc', NOW())
         `, { debug })
 
         if (!isEmpty(matches)) {
@@ -74,12 +57,6 @@ const Player = {
             `, { debug })
         }
 
-        await query(sql`
-            INSERT INTO player_shards (player_id, shard_id, last_fetched_at)
-            VALUES (${player.id}, ${shardId}, TIMEZONE('utc', NOW()))
-            ON CONFLICT (player_id, shard_id) DO UPDATE
-                SET last_fetched_at = TIMEZONE('utc', NOW())
-        `, { debug })
 
         return this.find(shardId, { id: pubgPlayer.id })
     },
