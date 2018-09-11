@@ -35,3 +35,5 @@ CREATE TABLE public.players (
 
 CREATE INDEX match_players_player_name ON match_players (player_name);
 CREATE INDEX players_shard_id_name ON players (shard_id, name);
+CREATE INDEX matches_game_mode_played_at ON matches (game_mode, played_at);
+CREATE INDEX match_players_player_id ON match_players (player_id);
