@@ -1,4 +1,5 @@
-import { flatMap } from 'lodash'
+import Promise from 'bluebird'
+import { flatMap, chunk } from 'lodash'
 import { query, sql } from 'pgr'
 
 const debug = false
@@ -38,32 +39,38 @@ const writeMatches = async pubgMatches => {
                 updated_at = timezone('utc', now())
         `, { debug })
 
-        await tquery(sql`
-            INSERT INTO match_players (match_id, player_id, player_name, roster_id, stats)
-            VALUES ${flatMap(pubgMatches, m => {
-                return m.included
-                    .filter(i => i.type === 'participant')
-                    .map(i => [
-                        m.data.id,
-                        i.attributes.stats.playerId,
-                        i.attributes.stats.name,
-                        m.included.find(i2 => {
-                            if (i2.type === 'roster') {
-                                return i2.relationships.participants.data.some(d => {
-                                    return d.id === i.id
-                                })
-                            }
+        const matchPlayers = flatMap(pubgMatches, m => {
+            return m.included
+                .filter(i => i.type === 'participant')
+                .map(i => [
+                    m.data.id,
+                    i.attributes.stats.playerId,
+                    i.attributes.stats.name,
+                    m.included.find(i2 => {
+                        if (i2.type === 'roster') {
+                            return i2.relationships.participants.data.some(d => {
+                                return d.id === i.id
+                            })
+                        }
 
-                            return false
-                        }).id,
-                        i.attributes.stats,
-                    ])
-                })}
-            ON CONFLICT (match_id, player_id) DO UPDATE
-                SET roster_id = EXCLUDED.roster_id,
-                stats = EXCLUDED.stats,
-                player_name = EXCLUDED.player_name
-        `, { debug })
+                        return false
+                    }).id,
+                    i.attributes.stats,
+                ])
+        })
+
+        const chunks = chunk(matchPlayers, 300)
+
+        await Promise.mapSeries(chunks, c => {
+            return tquery(sql`
+                INSERT INTO match_players (match_id, player_id, player_name, roster_id, stats)
+                VALUES ${c}
+                ON CONFLICT (match_id, player_id) DO UPDATE
+                    SET roster_id = EXCLUDED.roster_id,
+                    stats = EXCLUDED.stats,
+                    player_name = EXCLUDED.player_name
+            `, { debug })
+        })
     })
 }
 

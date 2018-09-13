@@ -62,7 +62,7 @@ export default {
                     console.log(`Loading ${idsToLoad.length} matches for ${player.name}`)
 
                     const pubgMatches = await Promise.map(idsToLoad, PubgApi.getMatch, {
-                        concurrency: 25,
+                        concurrency: 50,
                     })
                     await models.Match.create(pubgMatches)
 
