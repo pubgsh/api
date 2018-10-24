@@ -1,16 +1,19 @@
 import Promise from 'bluebird'
 import moment from 'moment'
-import { isEmpty } from 'lodash'
+import { isEmpty, get } from 'lodash'
 import TemporarySet from '@/lib/TemporarySet.js'
 import { playerFetchQueue } from '@/rate-limit-queue.js'
 
-export const knownBadPlayers = new TemporarySet(3 * 60 * 1000)
+const DEFAULT_FETCH_INTERVAL_MS = 1000 * 60 * 3
+export const knownBadPlayers = new TemporarySet(DEFAULT_FETCH_INTERVAL_MS)
 
 export function shouldFetch(player, playerKey) {
+    const minFetchIntervalMs = get(player, 'fetchIntervalMs') || DEFAULT_FETCH_INTERVAL_MS
+
     return !knownBadPlayers.has(playerKey) && (
         !player
         || !player.lastFetchedAt
-        || moment.utc().diff(moment.utc(player.lastFetchedAt), 'minute') > 3
+        || moment.utc().diff(moment.utc(player.lastFetchedAt), 'ms') > minFetchIntervalMs
     )
 }
 

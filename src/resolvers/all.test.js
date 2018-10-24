@@ -1,3 +1,4 @@
+import Promise from 'bluebird'
 import moment from 'moment'
 import { query, sql } from 'pgr'
 import Player from '@/models/Player.js'
@@ -57,6 +58,35 @@ describe('model :: Player and Match', () => {
                 lastFetchedAt: moment.utc('2018-01-01 00:00:00'),
             }
         })
+
+        await global.__graphql(`
+            query {
+                player(shardId: "pc-eu", name: "BreaK") {
+                    id
+                    name
+                    matches {
+                        id
+                    }
+                }
+            }
+        `)
+        expect(Player.createOrUpdate).toHaveBeenCalled()
+    })
+
+    test('re-requesting a player refreshes matches earlier if has lower fetch interval', async () => {
+        const now = moment.utc()
+
+        Player.find = jest.fn(async (...args) => {
+            return {
+                id: 'account.a36bed11ed214557b0ddef9ef1a56d07',
+                name: 'BreaK',
+                shardId: 'pc-eu',
+                lastFetchedAt: now,
+                fetchIntervalMs: 100,
+            }
+        })
+
+        await Promise.delay(100)
 
         await global.__graphql(`
             query {

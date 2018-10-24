@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import fs from 'fs-extra'
-import { cloneDeep } from 'lodash'
+import { cloneDeep, get } from 'lodash'
+import moment from 'moment'
 import path from 'path'
 import { Pool } from 'pg' // eslint-disable-line
 import { createPool, getPool, query, sql } from 'pgr'
@@ -44,6 +45,14 @@ function Fixture(filename, { mock = true }) {
                 console.error('Unable to find fixture for config')
                 console.error(JSON.stringify(config, null, 2))
                 throw Error('FIXTURE_NOT_FOUND')
+            }
+
+            // Note that because we limit retrieving matches from the database to 14 days since that's the
+            // max range that can be retrieved from PUBG, we need to adjust the matches to be in the future
+            // to bypass that clause for tests.
+            if (get(result, '[1].data.type') === 'match') {
+                const adjustedDate = moment.utc(result[1].data.attributes.createdAt).add(5, 'year')
+                result[1].data.attributes.createdAt = adjustedDate
             }
 
             return result

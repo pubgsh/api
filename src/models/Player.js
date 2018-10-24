@@ -7,11 +7,13 @@ const debug = false
 const Player = {
     async find(shardId, { id, name }) {
         return query.one(sql`
-            SELECT id, name, last_fetched_at AS "lastFetchedAt"
+            SELECT p.id, p.name, p.last_fetched_at AS "lastFetchedAt",
+                pfi.fetch_interval_ms AS "fetchIntervalMs"
             FROM players p
+                LEFT JOIN player_fetch_intervals pfi ON p.name = pfi.name
             WHERE shard_id = ${shardId}
-                ${sql.if('AND id = ?', id)}
-                ${sql.if('AND name = ?', name)}
+                ${sql.if('AND p.id = ?', id)}
+                ${sql.if('AND p.name = ?', name)}
         `, {
             rowMapper: row => ({ ...row, shardId }),
             debug,

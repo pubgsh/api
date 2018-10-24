@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS public.player_shards; -- Can remove this statement after next drop
+DROP TABLE IF EXISTS public.player_fetch_intervals;
 DROP TABLE IF EXISTS public.match_players;
 DROP TABLE IF EXISTS public.players;
 DROP TABLE IF EXISTS public.matches;
@@ -33,7 +33,22 @@ CREATE TABLE public.players (
     PRIMARY KEY (id, shard_id)
 );
 
+CREATE TABLE public.player_fetch_intervals (
+    name varchar(255) NOT NULL,
+    fetch_interval_ms integer NOT NULL,
+    PRIMARY KEY (name)
+);
+
 CREATE INDEX match_players_player_name ON match_players (player_name);
 CREATE INDEX players_shard_id_name ON players (shard_id, name);
 CREATE INDEX matches_game_mode_played_at ON matches (game_mode, played_at);
 CREATE INDEX match_players_player_id ON match_players (player_id);
+
+
+INSERT INTO player_fetch_intervals (name, fetch_interval_ms)
+VALUES
+    ('Bevo', 30000),
+    ('BOT_Andre', 30000),
+    ('Goobeez', 30000),
+    ('Blarley', 30000),
+    ('SIX-MO', 30000);
