@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import { flatMap, chunk } from 'lodash'
+import { flatMap, chunk, isEmpty } from 'lodash'
 import { query, sql } from 'pgr'
 
 const debug = false
@@ -110,7 +110,9 @@ const Match = {
 
     async create(pubgMatches) {
         const filteredMatches = pubgMatches.filter(m => m.data.attributes.duration <= 10000)
-        return writeMatches(filteredMatches)
+        if (!isEmpty(filteredMatches)) {
+            await writeMatches(filteredMatches)
+        }
     },
 
     async getSample(shardId) {
