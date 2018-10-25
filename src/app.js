@@ -101,9 +101,9 @@ async function init() {
     createPool('default', pgConfig)
     console.log(`PG connected to [${process.env.PGHOST} : ${process.env.PGDATABASE}]`)
 
-    if (process.env.NODE_ENV !== 'production') {
-        await recreateDb()
-    }
+    // if (process.env.NODE_ENV !== 'production') {
+    await recreateDb()
+    // }
 
     await registerGraphql()
     await registerGraphiql()
