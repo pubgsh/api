@@ -109,7 +109,8 @@ const Match = {
     },
 
     async create(pubgMatches) {
-        return writeMatches(pubgMatches)
+        const filteredMatches = pubgMatches.filter(m => m.data.attributes.duration <= 10000)
+        return writeMatches(filteredMatches)
     },
 
     async getSample(shardId) {
