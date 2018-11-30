@@ -23,7 +23,7 @@ function updateRateLimits(headers) {
     console.log(`Rate Limits: ${remaining} left, resets in ${(reset - (Date.now() / 1000))} sec`)
 }
 
-async function apiGet(path, shardId = 'pc-na') {
+async function apiGet(path, shardId = 'steam') {
     if (!path.startsWith('matches/')) console.log(chalk.blue(`[API]: Retrieving ${shardId}/${path}`))
 
     const m = path.startsWith('matches') ? metrics.matches : metrics.player
@@ -36,7 +36,7 @@ async function apiGet(path, shardId = 'pc-na') {
                 Authorization: `Bearer ${process.env.PUBG_API_KEY}`,
                 Accept: 'application/vnd.api+json',
             },
-            url: `https://api.playbattlegrounds.com/shards/${shardId}/${path}`,
+            url: `https://api.pubg.com/shards/${shardId}/${path}`,
         })
 
         if (get(res, 'headers.x-ratelimit-limit')) updateRateLimits(res.headers)
