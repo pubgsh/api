@@ -33,7 +33,7 @@ const Player = {
             d.id,
             shardId,
             moment.utc(now - (i * 1000)).format('YYYY-MM-DD HH:mm:ss'),
-        ]).slice(0, 50)
+        ]).slice(0, 100)
         const matchPlayers = matches.map(m => [m[0], player.id, player.name])
 
         await query(sql`

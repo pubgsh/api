@@ -88,7 +88,7 @@ const Match = {
             WHERE shard_id = ${shardId} AND player_id = ${playerId}
                 AND m.played_at > (TIMEZONE('utc', NOW()) - INTERVAL '14 DAY')
             ORDER BY m.played_at DESC
-            LIMIT 50
+            LIMIT 100
         `, { debug })
     },
 
@@ -100,7 +100,7 @@ const Match = {
             JOIN matches m ON mp.match_id = m.id
             WHERE shard_id = ${shardId} AND player_id = ${playerId}
             ORDER BY m.created_at DESC
-            LIMIT 50
+            LIMIT 100
         `, { debug })
 
         // We want to filter in memory instead of the DB so that we don't constantly go back in time
