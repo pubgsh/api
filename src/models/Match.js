@@ -87,6 +87,7 @@ const Match = {
             JOIN matches m ON mp.match_id = m.id
             WHERE shard_id = ${shardId} AND player_id = ${playerId}
                 AND m.played_at > (TIMEZONE('utc', NOW()) - INTERVAL '14 DAY')
+                AND m.map_name <> 'Range_Main'
             ORDER BY m.played_at DESC
             LIMIT 100
         `, { debug })
@@ -122,6 +123,7 @@ const Match = {
             JOIN matches m ON mp.match_id = m.id
             WHERE m.shard_id = ${shardId}
                 AND game_mode IN ('squad-fpp')
+                AND m.map_name <> 'Range_Main'
             AND played_at IS NOT NULL
             ORDER BY m.played_at DESC
             LIMIT 1
