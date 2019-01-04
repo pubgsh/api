@@ -47,8 +47,9 @@ CREATE INDEX match_players_player_id ON match_players (player_id);
 
 INSERT INTO player_fetch_intervals (name, fetch_interval_ms)
 VALUES
-    ('Bevo', 30000),
     ('BOT_Andre', 30000),
     ('Goobeez', 30000),
     ('Blarley', 30000),
-    ('SIX-MO', 30000);
+    ('Bevo', 30000),
+    ('SIX-MO', 30000),
+    ('Selah', 30000);
