@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import { flatMap, chunk, isEmpty } from 'lodash'
+import { flatMap, chunk, isEmpty, pick } from 'lodash'
 import { query, sql } from 'pgr'
 
 const debug = false
@@ -55,7 +55,7 @@ const writeMatches = async pubgMatches => {
 
                         return false
                     }).id,
-                    i.attributes.stats,
+                    pick(i.attributes.stats, ['winPlace', 'kills']),
                 ])
         })
 
