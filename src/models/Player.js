@@ -37,10 +37,11 @@ const Player = {
         const matchPlayers = matches.map(m => [m[0], player.id, player.name])
 
         await query(sql`
-            INSERT INTO players (id, shard_id, name, last_fetched_at)
+            INSERT INTO players AS p (id, shard_id, name, last_fetched_at)
             VALUES (${player.id}, ${shardId}, ${player.name}, TIMEZONE('utc', NOW()))
             ON CONFLICT (id, shard_id) DO UPDATE
-                SET last_fetched_at = TIMEZONE('utc', NOW())
+                SET last_fetched_at = TIMEZONE('utc', NOW()),
+                num_fetches = p.num_fetches + 1
         `, { debug })
 
         if (!isEmpty(matches)) {

@@ -29,6 +29,7 @@ CREATE TABLE public.players (
     shard_id varchar(255) NOT NULL,
     name varchar(255) NOT NULL,
     created_at timestamp NOT NULL DEFAULT timezone('utc', now()),
+    num_fetches int NOT NULL DEFAULT 1,
     last_fetched_at timestamp NULL,
     PRIMARY KEY (id, shard_id)
 );
