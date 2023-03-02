@@ -1,12 +1,13 @@
 import moment from 'moment';
 import { isEmpty } from 'lodash';
-import { query, sql } from 'pgr';
+import { sql } from 'pgr';
+import { db } from '../app'
 
 const debug = false;
 
 const Player = {
   async find(shardId, { id, name }) {
-    return query.one(
+    return db.get(
       sql`
             SELECT p.id, p.name, p.last_fetched_at AS "lastFetchedAt",
                 pfi.fetch_interval_ms AS "fetchIntervalMs"
@@ -15,12 +16,7 @@ const Player = {
             WHERE shard_id = ${shardId}
                 ${sql.if('AND p.id = ?', id)}
                 ${sql.if('AND p.name = ?', name)}
-        `,
-      {
-        rowMapper: (row) => ({ ...row, shardId }),
-        debug,
-      },
-    );
+        `.getStatement()).then(row => ({  ...row, shardId }))
   },
 
   async createOrUpdate(pubgPlayer) {
@@ -37,37 +33,31 @@ const Player = {
       .slice(0, 100);
     const matchPlayers = matches.map((m) => [m[0], player.id, player.name]);
 
-    await query(
+    await db.exec(
       sql`
-            INSERT INTO players AS p (id, shard_id, name, last_fetched_at)
-            VALUES (${player.id}, ${shardId}, ${player.name}, TIMEZONE('utc', NOW()))
-            ON CONFLICT (id, shard_id) DO UPDATE
-                SET last_fetched_at = TIMEZONE('utc', NOW()),
-                num_fetches = p.num_fetches + 1
-        `,
-      { debug },
-    );
+          INSERT INTO players AS p (id, shard_id, name, last_fetched_at)
+          VALUES (${player.id}, ${shardId}, ${player.name}, current_timestamp)
+          ON CONFLICT (id, shard_id) DO UPDATE
+              SET last_fetched_at = current_timestamp,
+              num_fetches = p.num_fetches + 1
+      `.getStatement());
 
     if (!isEmpty(matches)) {
-      await query(
+      await db.exec(
         sql`
-                INSERT INTO matches (id, shard_id, created_at)
-                VALUES ${matches}
-                ON CONFLICT DO NOTHING
-            `,
-        { debug },
-      );
+            INSERT INTO matches (id, shard_id, created_at)
+            VALUES ${matches}
+            ON CONFLICT DO NOTHING
+        `.getStatement());
     }
 
     if (!isEmpty(matchPlayers)) {
-      await query(
+      await db.exec(
         sql`
-                INSERT INTO match_players (match_id, player_id, player_name)
-                VALUES ${matchPlayers}
-                ON CONFLICT DO NOTHING
-            `,
-        { debug },
-      );
+          INSERT INTO match_players (match_id, player_id, player_name)
+          VALUES ${matchPlayers}
+          ON CONFLICT DO NOTHING
+      `.getStatement());
     }
 
     return this.find(shardId, { id: pubgPlayer.id });

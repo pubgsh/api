@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS public.player_fetch_intervals;
-DROP TABLE IF EXISTS public.match_players;
-DROP TABLE IF EXISTS public.players;
-DROP TABLE IF EXISTS public.matches;
+DROP TABLE IF EXISTS player_fetch_intervals;
+DROP TABLE IF EXISTS match_players;
+DROP TABLE IF EXISTS players;
+DROP TABLE IF EXISTS matches;
 
-CREATE TABLE public.matches (
+CREATE TABLE matches (
     id varchar(255) PRIMARY KEY,
     shard_id varchar(255) NOT NULL,
     game_mode varchar(255) NULL,
@@ -11,30 +11,30 @@ CREATE TABLE public.matches (
     map_name varchar(255) NULL,
     duration_seconds integer NULL,
     telemetry_url varchar(255) NULL,
-    created_at timestamp NOT NULL DEFAULT timezone('utc', now()),
+    created_at timestamp NOT NULL DEFAULT current_timestamp,
     updated_at timestamp NULL
 );
 
-CREATE TABLE public.match_players (
+CREATE TABLE match_players (
     match_id varchar(255) NOT NULL REFERENCES matches (id) ON DELETE CASCADE,
     player_id varchar(255) NOT NULL,
     player_name varchar(255) NOT NULL,
     roster_id varchar(255) NULL,
-    stats JSON NULL,
+    stats text NULL,
     PRIMARY KEY (match_id, player_id)
 );
 
-CREATE TABLE public.players (
+CREATE TABLE players (
     id varchar(255) NOT NULL,
     shard_id varchar(255) NOT NULL,
     name varchar(255) NOT NULL,
-    created_at timestamp NOT NULL DEFAULT timezone('utc', now()),
+    created_at timestamp NOT NULL DEFAULT current_timestamp,
     num_fetches int NOT NULL DEFAULT 1,
     last_fetched_at timestamp NULL,
     PRIMARY KEY (id, shard_id)
 );
 
-CREATE TABLE public.player_fetch_intervals (
+CREATE TABLE player_fetch_intervals (
     name varchar(255) NOT NULL,
     fetch_interval_ms integer NOT NULL,
     PRIMARY KEY (name)

@@ -8,7 +8,7 @@ import PubgApi from '@/lib/pubg-api.js';
 
 const registeredSockets = {};
 if (process.env.NODE_ENV !== 'test') {
-  setImmediate(() => {
+  setTimeout(() => {
     const io = getIo();
 
     io.on('connection', (socket) => {
@@ -25,7 +25,7 @@ if (process.env.NODE_ENV !== 'test') {
         registeredSockets[playerKey].splice(registeredSockets[playerKey].indexOf(socket), 1);
       });
     });
-  });
+  }, 500);
 }
 
 export const playerFetchQueue = queue(async ({ shardId, name, playerKey }) => {
