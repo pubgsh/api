@@ -1,4 +1,4 @@
-import { MatchFields } from './Match.js'
+import { MatchFields } from './Match.js';
 
 export default `
     type Player {
@@ -19,4 +19,4 @@ export default `
     type Query {
         player(shardId: String!, name: String!): Player
     }
-`
+`;

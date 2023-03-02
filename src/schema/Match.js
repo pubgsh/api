@@ -6,7 +6,7 @@ export const MatchFields = `
     mapName: String
     durationSeconds: Int
     telemetryUrl: String
-`
+`;
 
 export default `
     type MatchStats {
@@ -36,4 +36,4 @@ export default `
         match(id: String!): Match!
         sampleMatch(shardId: String!): SampleMatch!
     }
-`
+`;
